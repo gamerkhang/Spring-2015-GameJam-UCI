@@ -21,9 +21,13 @@ public class Clock : MonoBehaviour {
 
 	public bool positiveRange = true;
 	
-    public Slider SliderSuccess;
+    public Image ClockHealthBar;
 	public Text TextClock;
 	public Text TextThreshold;
+
+
+	float timeChanger = 0f;
+	float LifeMultiplier = 0f;
 
 	void Start () {
 		successTickRate = GameManager.universalTickRate;
@@ -32,12 +36,14 @@ public class Clock : MonoBehaviour {
 		timeToSuccess = Random.Range (minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range (minThreshold, maxThreshold);
 
-        SliderSuccess.maxValue = timeToSuccess;
+        //SliderSuccess.maxValue = timeToSuccess;
         TextThreshold.text = failureThreshold + " Min";
 
 		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
 		InvokeRepeating ("UpdateTimeToSuccess", 0f, successTickRate);
 		infoCard.gameObject.SetActive (false);
+
+		LifeMultiplier = (float) 1 / timeToSuccess;
 	}
 
 	void ParseTime(Text t, int minutes){
@@ -67,14 +73,13 @@ public class Clock : MonoBehaviour {
     void UpdateTimeToSuccess()
     {
 		timeToSuccess--;
-        SliderSuccess.value = timeToSuccess;
+		ClockHealthBar.fillAmount -= LifeMultiplier;
 
         if (timeToSuccess <= 0)
             DisableClock();
 	}
 
-	void OnMouseOver(){
-        float timeChanger = 0f;
+	void OnMouseOver(){        
 		if (Input.GetMouseButton(0)) { //left button
 			timeChanger += .25f;
 			if( timeChanger > 1){
@@ -104,6 +109,7 @@ public class Clock : MonoBehaviour {
         CancelInvoke("UpdateTimeToSuccess");
         CancelInvoke("UpdateClockTime");
         gameObject.SetActive(false);
+		infoCard.gameObject.SetActive(false);
     }
 
     void StartClock()
@@ -112,7 +118,7 @@ public class Clock : MonoBehaviour {
         timeToSuccess = Random.Range(minSuccessTime, maxSuccessTime);
         failureThreshold = Random.Range(minThreshold, maxThreshold);
 
-        SliderSuccess.maxValue = timeToSuccess;
+//        SliderSuccess.maxValue = timeToSuccess;
         TextThreshold.text = failureThreshold + " Min";
 
         InvokeRepeating("UpdateClockTime", 0f, clockTickRate);
