@@ -3,38 +3,20 @@ using System.Collections;
 
 public class ScreenShake : MonoBehaviour 
 {
-	public static CameraShake Instance;
-
-	private float _amplitude = 0.1;
-	private float _duration = 0.5f;
-
-	private Vector3 initialPosition;
-	private bool isShaking = false;
-
-	// Use this for initialization
-	void Start () 
-	{
-		Instance = this;
-		initialPosition = transform.localPosition;
-	}
-
-	public void Shake(float amplitude, float duration)
-	{
-		isShaking = true
-		CancelInvoke();
-		Invoke("StopShaking", duration);
-	}
-
-	public void StopShaking()
-	{
-		isShaking = false
-	}
-	// Update is called once per frame
-	void Update () 
-	{
-		if(isShaking)
-		{
-			transform.localPosition = initialPosition + Random.insideUnitSphere+amplitude;
+	public Camera myCamera; // set this via inspector
+	public float shake = 0;
+	public float shakeAmount = 0.7f;
+	public float decreaseFactor  = 1.0f;
+	
+	void Update() {
+		if (shake > 0) {
+			myCamera.transform.localPosition = Random.insideUnitSphere * shakeAmount;
+			myCamera.transform.localPosition = new Vector3(myCamera.transform.localPosition.x, myCamera.transform.localPosition.y, -10.0f);
+			shake -= Time.deltaTime * decreaseFactor;
+			Debug.Log(shake);
+			
+		} else {
+			shake = 0.0f;
 		}
 	}
 }
