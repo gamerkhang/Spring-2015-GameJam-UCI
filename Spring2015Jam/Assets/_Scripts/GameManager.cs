@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 //		clockText = GameObject.Find ("Clock").GetComponent<Text>();
 //		livesText = GameObject.Find ("Lives").GetComponent<Text>();
-		InvokeRepeating("UpdateUniversalClock", 1.0f, 0.2f);
+		InvokeRepeating("UpdateUniversalClock", 0f, 0.2f);
 		pauseMenu = GameObject.Find("PauseMenu");
 		gameOverMenu = GameObject.Find("GameOverMenu");
 	}
@@ -28,7 +28,11 @@ public class GameManager : MonoBehaviour {
 			return;
 
 		//ShowClock();
-
+		
+		if (lives <= 0) {
+			GameOver();
+			//make button to try again or quit active; try again button reloads the scene.
+		}
 
 	}
 
@@ -70,13 +74,13 @@ public class GameManager : MonoBehaviour {
 
 	public static void LoseLife () {
 		lives--;
-		if (lives <= 0) {
-			GameOver();
-			//make button to try again or quit active; try again button reloads the scene.
-		}
 	}
 
-	static void GameOver () {
+	public static int getUniversalTime (){
+		return CurrentUniversalTime;
+	}
+
+	public void GameOver () {
 		Time.timeScale = 0;
 		//gameOverMenu.SetActive(true);
 	}

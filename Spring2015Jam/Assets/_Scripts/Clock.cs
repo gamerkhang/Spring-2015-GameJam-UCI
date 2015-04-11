@@ -4,52 +4,49 @@ using UnityEngine.UI;
 
 
 public class Clock : MonoBehaviour {
-	public int lifeTime, killRange;
-	float rate;
-	GameObject GameManager;
+	int lifeTime, killRange;
+
+	public float changing_rate;
+
 	public GameObject infoCard;
+
 	public int maxLife;
 	public int minLife;
 	public int maxRange;
 	public int minRange;
+
 	int hour, min, currentTime;
-	float delay = 0f;
+
+	bool ClockAlive = true;
+
 	public bool positiveRange = true;
+	
 	float timeChanger = 0f;
+
 	public Text ClockLife;
 	public Text ClockTime;
 	public Text ClockRange;
 	public Scrollbar slid;
+
 	float multiplier = 0f;
 
 	void Start () {
-		GameManager = GameObject.Find ("GameManager");
+
 		killRange = Random.Range (minRange, maxRange);
-		currentTime = 770;
+		currentTime = 725;
 		lifeTime = Random.Range (minLife, maxLife);
 		setClockLife ();
 		setKillRange ();
 		hour = min = 0;
-		InvokeRepeating ("UpdateClockTime", 1f, 0.2f);
-		InvokeRepeating ("LowerLifeTime", 0f, 1f);
+		InvokeRepeating ("UpdateClockTime", 0f, changing_rate);
+		InvokeRepeating ("LowerLifeTime", 0f, changing_rate);
 		infoCard.gameObject.SetActive (false);
 		multiplier = (float)1/lifeTime;
-	}
-	
 
-	void FixedUpdate () {
-
-	}
-
-	void CheckLimits(){
-		if (lifeTime <= 0) {
-			currentTime = 0;
-			hour = 0;
-		}
 	}
 
 	void setClockLife (){
-		ParseTime (ClockLife, (currentTime + lifeTime));
+		ParseTime (ClockLife, lifeTime);
 	}
 
 	void setKillRange (){
@@ -71,21 +68,36 @@ public class Clock : MonoBehaviour {
 
 	void UpdateClockTime(){
 		currentTime += 1;
-
 		CheckLimits ();
 		ParseTime (ClockTime, currentTime);
 	}
 
-	void LowerLifeTime (){
-		lifeTime--;
-		slid.size -= multiplier;
+	void CheckLimits(){
+		if (lifeTime <= 0 && ClockAlive) {
+			lifeTime=1;
+			currentTime = 0;
+			hour = 0;
+		} else if (positiveRange) {
+			if ((currentTime - GameManager.getUniversalTime ()) >= killRange) {
+				GameManager.LoseLife ();
+				ClockAlive=false;
+				killRange = 999;
+				setKillRange ();
+			}
+		} else if ((GameManager.getUniversalTime () - currentTime) >= killRange) {
+			GameManager.LoseLife ();
+			ClockAlive=false;
+			killRange = 999;
+			setKillRange ();
+		}
 	}
 
-	void printTime(){
-		string minute="";
-		if(min<10)
-			minute = "0";
-		ClockTime.text = (hour + ":"+minute + min).ToString();
+	void LowerLifeTime (){
+		if (ClockAlive) {
+			lifeTime--;
+			slid.size -= multiplier;
+			setClockLife ();
+		}
 	}
 
 	void OnMouseOver(){
@@ -95,7 +107,6 @@ public class Clock : MonoBehaviour {
 				currentTime += (int) timeChanger;
 				timeChanger = 0f;
 			}
-			//Debug.Log("here");
 		}
 		else if (Input.GetMouseButton(1)) { //right button
 			timeChanger += .25f;

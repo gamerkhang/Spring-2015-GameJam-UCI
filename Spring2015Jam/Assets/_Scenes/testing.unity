@@ -553,14 +553,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 0
-  killRange: 0
+  changing_rate: .200000003
   infoCard: {fileID: 218256877}
   maxLife: 70
   minLife: 60
   maxRange: 59
   minRange: 40
-  positiveRange: 1
+  positiveRange: 0
   ClockLife: {fileID: 2102358525}
   ClockTime: {fileID: 729074070}
   ClockRange: {fileID: 760436323}
@@ -891,7 +890,7 @@ GameObject:
   - 212: {fileID: 1601866324}
   - 114: {fileID: 1601866326}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
