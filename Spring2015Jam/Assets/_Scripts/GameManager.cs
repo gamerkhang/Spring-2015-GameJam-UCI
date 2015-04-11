@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
 		InvokeRepeating("UpdateUniversalClock", 0f, 0.2f);
 		pauseMenu = GameObject.Find("PauseMenu");
 		gameOverMenu = GameObject.Find("GameOverMenu");
+		gameOverMenu.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -82,7 +83,7 @@ public class GameManager : MonoBehaviour {
 
 	public void GameOver () {
 		Time.timeScale = 0;
-		//gameOverMenu.SetActive(true);
+		gameOverMenu.SetActive(true);
 	}
 	public void Pause () {
 		Time.timeScale = 0;
