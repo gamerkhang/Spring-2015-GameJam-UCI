@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Clock : MonoBehaviour {
 	public int lifeTime, killRange;
 
+	public float lifeTimeTickRate;
 	public float tickRate;
 
 	public GameObject infoCard;
@@ -31,12 +32,14 @@ public class Clock : MonoBehaviour {
 	//float multiplier = 0f;
 
 	void Start () {
+		lifeTimeTickRate = GameManager.universalTickRate;
+
 		currentTime = GameManager.CurrentUniversalTime + 5;
 		lifeTime = Random.Range (minLife, maxLife);
 		killRange = Random.Range (minRange, maxRange);
 		setClockLife ();
 		setKillRange ();
-		InvokeRepeating ("UpdateClockTime", 0f, tickRate);
+		InvokeRepeating ("UpdateClockTime", 0f, lifeTimeTickRate);
 		InvokeRepeating ("LowerLifeTime", 0f, tickRate);
 		infoCard.gameObject.SetActive (false);
 		//multiplier = (float)1/lifeTime;
@@ -48,7 +51,7 @@ public class Clock : MonoBehaviour {
 	}
 
 	void setKillRange (){
-		ClockRange.text = killRange + "Min";
+		ClockRange.text = killRange + " Min";
 	}
 
 	void ParseTime(Text t, int minutes){
@@ -72,7 +75,7 @@ public class Clock : MonoBehaviour {
 
 	void CheckLimits(){
 		if (lifeTime <= 0 && ClockAlive) {
-			lifeTime=1;
+			//lifeTime=1;
 			currentTime = 0;
 			hour = 0;
 			gameObject.SetActive(false);

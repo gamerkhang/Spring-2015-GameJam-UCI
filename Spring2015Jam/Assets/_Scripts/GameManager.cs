@@ -12,12 +12,14 @@ public class GameManager : MonoBehaviour {
 	public static int CurrentUniversalTime = 720;
 	public int minClocks, maxClocks;
 	public GameObject pauseMenu, gameOverMenu;
+	public static float universalTickRate;
 
 	// Use this for initialization
 	void Start () {
+		universalTickRate = 0.2f;
 //		clockText = GameObject.Find ("Clock").GetComponent<Text>();
 //		livesText = GameObject.Find ("Lives").GetComponent<Text>();
-		InvokeRepeating("UpdateUniversalClock", 0f, 0.2f);
+		InvokeRepeating("UpdateUniversalClock", 0f, universalTickRate);
 		pauseMenu = GameObject.Find("PauseMenu");
 		gameOverMenu = GameObject.Find("GameOverMenu");
 		gameOverMenu.SetActive(false);
