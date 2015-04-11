@@ -10,14 +10,16 @@ public class GameManager : MonoBehaviour {
 	int gameHour = 0, gameMinute = 0;
 	public static int lives = 5;
 	public static int CurrentUniversalTime = 720;
-	public int minClocks, maxClocks;
+	public int currentAmountClocks, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
 	public static float universalTickRate;
+	public float clockSpawnRate = 30.0f;
 
 	// Use this for initialization
 	void Start () {
 		universalTickRate = 0.2f;
 		InvokeRepeating("UpdateUniversalClock", 0f, universalTickRate);
+		InvokeRepeating("AddClock", 0f, clockSpawnRate);
 		pauseMenu.SetActive(false);
 		gameOverMenu.SetActive(false);
 	}
@@ -34,21 +36,17 @@ public class GameManager : MonoBehaviour {
 
 		if (Time.timeScale == 0)
 			return;
-
-		//ShowClock();
 		livesText.text = lives.ToString();
-		
 		if (lives <= 0) {
 			GameOver();
-			//make button to try again or quit active; try again button reloads the scene.
 		}
+
+
 
 	}
 
 	void FixedUpdate () {
 		//Running this depends on Timescale
-		//Universal clock to sync w/
-		//Debug.Log(gameHour + ":" + gameMinute);
 	}
 
 	void UpdateUniversalClock () {
@@ -70,7 +68,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	void ShowClock () {
+	void AddClock () {
+		if ()
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?
         //set the chosen one active
 	}
