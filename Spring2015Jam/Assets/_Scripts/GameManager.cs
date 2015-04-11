@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
 	//Clock array
 	public GameObject[] spawnableClocks;
+	public Text clockText;
+	public Text livesText;
 	public static int gameHour = 12, gameMinute = 0;
-	public int lives = 5;
+	public static int lives = 5;
 	public int minClocks, maxClocks;
 	public GameObject pauseMenu, gameOverMenu;
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating("UpdateUniversalClock", 1.0f, 5.0f);
+		clockText = GameObject.Find ("Clock").GetComponent<Text>();
+		livesText = GameObject.Find ("Lives").GetComponent<Text>();
+		InvokeRepeating("UpdateUniversalClock", 1.0f, 0.01f);
 		pauseMenu = GameObject.Find("PauseMenu");
 		gameOverMenu = GameObject.Find("GameOverMenu");
 	}
@@ -20,6 +25,8 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		if (Time.timeScale == 0)
 			return;
+
+		ShowClock();
 
 
 	}
@@ -43,6 +50,10 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	void ShowClock () {
+		clockText.text = string.Format ("{0:D2}:{1:D2}", gameHour, gameMinute);
+	}
+
 	void SpawnClock () {
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?
 	}
@@ -51,7 +62,7 @@ public class GameManager : MonoBehaviour {
 		lives++;
 	}
 
-	public void LoseLife () {
+	public static void LoseLife () {
 		lives--;
 		if (lives <= 0) {
 			GameOver();
@@ -59,7 +70,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	void GameOver () {
+	static void GameOver () {
 		Time.timeScale = 0;
 		//gameOverMenu.SetActive(true);
 	}

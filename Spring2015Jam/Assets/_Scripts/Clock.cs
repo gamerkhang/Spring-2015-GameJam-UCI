@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 
 public class Clock : MonoBehaviour {
-	int lifeTime, killRange;
+	public int lifeTime, killRange;
 	float rate;
 	GameObject GameManager;
 	public GameObject infoCard;
