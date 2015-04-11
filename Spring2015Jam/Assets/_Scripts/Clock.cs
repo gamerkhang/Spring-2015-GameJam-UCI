@@ -38,20 +38,6 @@ public class Clock : MonoBehaviour {
 	
 
 	void FixedUpdate () {
-//		delay += 5 * Time.deltaTime;
-//		if (delay >= 2) {
-//			delay = 0;
-//
-////			if (min > 59) {
-////				min = 0;
-////				lifeTime-=1;
-////				hour += 1;
-////				
-////			}
-//			CheckLimits();
-//			printTime ();
-//		}
-
 
 	}
 
@@ -75,11 +61,11 @@ public class Clock : MonoBehaviour {
 		if (hour > 12) {
 			hour -=(12*(hour/12));
 		}
-		min = currentTime % 60;
+		min = minutes % 60;
 		string minute="";
 		if(min<10)
 			minute = "0";
-		t.text = (hour + ":" + minute + min).ToString ();
+		t.text = string.Format ("{0:D2}:{1:D2}", hour, min);
 	}
 
 

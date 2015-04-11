@@ -7,16 +7,17 @@ public class GameManager : MonoBehaviour {
 	public GameObject[] spawnableClocks;
 	public Text clockText;
 	public Text livesText;
-	public static int gameHour = 12, gameMinute = 0;
+	int gameHour = 0, gameMinute = 0;
 	public static int lives = 5;
+	public static int CurrentUniversalTime = 720;
 	public int minClocks, maxClocks;
 	public GameObject pauseMenu, gameOverMenu;
 
 	// Use this for initialization
 	void Start () {
-		clockText = GameObject.Find ("Clock").GetComponent<Text>();
-		livesText = GameObject.Find ("Lives").GetComponent<Text>();
-		InvokeRepeating("UpdateUniversalClock", 1.0f, 0.01f);
+//		clockText = GameObject.Find ("Clock").GetComponent<Text>();
+//		livesText = GameObject.Find ("Lives").GetComponent<Text>();
+		InvokeRepeating("UpdateUniversalClock", 1.0f, 0.2f);
 		pauseMenu = GameObject.Find("PauseMenu");
 		gameOverMenu = GameObject.Find("GameOverMenu");
 	}
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour {
 		if (Time.timeScale == 0)
 			return;
 
-		ShowClock();
+		//ShowClock();
 
 
 	}
@@ -34,25 +35,30 @@ public class GameManager : MonoBehaviour {
 	void FixedUpdate () {
 		//Running this depends on Timescale
 		//Universal clock to sync w/
-		Debug.Log(gameHour + ":" + gameMinute);
+		//Debug.Log(gameHour + ":" + gameMinute);
 	}
 
 	void UpdateUniversalClock () {
-		gameMinute++;
+		CurrentUniversalTime += 1;
+		ParseTime (clockText, CurrentUniversalTime);
+	}
 
-		if (gameMinute >= 60)
-		{
-			gameMinute = 0;
-			gameHour++;
 
-			if (gameHour >= 13)
-				gameHour = 1;
+	void ParseTime(Text t, int minutes){
+		gameHour = minutes / 60;
+		if (gameHour > 12) {
+			gameHour -=(12*(gameHour/12));
 		}
+		gameMinute = minutes % 60;
+		string minute="";
+		if(gameMinute<10)
+			minute = "0";
+		t.text = string.Format ("{0:D2}:{1:D2}", gameHour, gameMinute);
 	}
 
-	void ShowClock () {
-		clockText.text = string.Format ("{0:D2}:{1:D2}", gameHour, gameMinute);
-	}
+//	void ShowClock () {
+//		clockText.text = 
+//	}
 
 	void SpawnClock () {
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?

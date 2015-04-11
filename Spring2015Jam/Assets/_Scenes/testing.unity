@@ -553,6 +553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeTime: 0
+  killRange: 0
   infoCard: {fileID: 218256877}
   maxLife: 70
   minLife: 60
@@ -887,6 +889,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1601866325}
   - 212: {fileID: 1601866324}
+  - 114: {fileID: 1601866326}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -932,6 +935,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1601866326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601866323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d27409b7a0c244d9255726eeea92f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableClocks: []
+  clockText: {fileID: 827001189}
+  livesText: {fileID: 0}
+  minClocks: 0
+  maxClocks: 0
+  pauseMenu: {fileID: 0}
+  gameOverMenu: {fileID: 0}
 --- !u!1 &1839898974
 GameObject:
   m_ObjectHideFlags: 0
