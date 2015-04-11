@@ -17,16 +17,21 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		universalTickRate = 0.2f;
-//		clockText = GameObject.Find ("Clock").GetComponent<Text>();
-//		livesText = GameObject.Find ("Lives").GetComponent<Text>();
 		InvokeRepeating("UpdateUniversalClock", 0f, universalTickRate);
-		pauseMenu = GameObject.Find("PauseMenu");
-		gameOverMenu = GameObject.Find("GameOverMenu");
+		pauseMenu.SetActive(false);
 		gameOverMenu.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetButtonDown("Pause"))
+		{
+			if (Time.timeScale == 0)
+				Unpause();
+			else
+				Pause ();
+		}
+
 		if (Time.timeScale == 0)
 			return;
 
@@ -86,13 +91,22 @@ public class GameManager : MonoBehaviour {
 		Time.timeScale = 0;
 		gameOverMenu.SetActive(true);
 	}
+
 	public void Pause () {
 		Time.timeScale = 0;
-		//pauseMenu.SetActive(true);
+		pauseMenu.SetActive(true);
 	}
 
 	public void Unpause () {
-		//pauseMenu.SetActive(false);
+		pauseMenu.SetActive(false);
 		Time.timeScale = 1;
+	}
+
+	public void TryAgain () {
+		Application.LoadLevel ("Gameplay");
+	}
+
+	public void Quit () {
+		Application.Quit ();
 	}
 }
