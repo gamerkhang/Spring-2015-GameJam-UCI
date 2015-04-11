@@ -25,8 +25,9 @@ public class Clock : MonoBehaviour {
 	public Text TextClock;
 	public Text TextThreshold;
 
-
-	float timeChanger = 0f;
+    public float clickChangeRate;
+    float timeChanger = 0f;
+ 
 	float LifeMultiplier = 0f;
 
 	void Start () {
@@ -46,28 +47,28 @@ public class Clock : MonoBehaviour {
 		LifeMultiplier = (float) 1 / timeToSuccess;
 	}
 
-	void ParseTime(Text t, int minutes){
-		hour = minutes / 60;
+	void DisplayTime(){
+        hour = currentTime / 60;
 		if (hour > 12) {
 			hour -=(12*(hour/12));
 		}
-		min = minutes % 60;
-		t.text = string.Format ("{0:D2}:{1:D2}", hour, min);
+        min = currentTime % 60;
+		TextClock.text = string.Format ("{0:D2}:{1:D2}", hour, min);
 	}
 
 
 	void UpdateClockTime(){
 		currentTime += 1;
-		CheckLimits ();
-		ParseTime (TextClock, currentTime);
+		CheckFailure ();
+		DisplayTime ();
 	}
 
-	void CheckLimits(){
+	void CheckFailure(){
         if (Mathf.Abs(GameManager.getUniversalTime() - currentTime) >= failureThreshold)
         {
             GameManager.LoseLife();
             DisableClock();
-        };
+        }
 	}
 
     void UpdateTimeToSuccess()
@@ -80,19 +81,21 @@ public class Clock : MonoBehaviour {
 	}
 
 	void OnMouseOver(){        
-		if (Input.GetMouseButton(0)) { //left button
-			timeChanger += .25f;
+		if (Input.GetMouseButton(0)) { //left button, speedup
+            timeChanger += clickChangeRate;
 			if( timeChanger > 1){
 				currentTime += (int) timeChanger;
 				timeChanger = 0f;
 			}
+            DisplayTime();
 		}
-		else if (Input.GetMouseButton(1)) { //right button
-			timeChanger += .25f;
+		else if (Input.GetMouseButton(1)) { //right button, slowdown
+            timeChanger += clickChangeRate;
 			if( timeChanger > 1){
 				currentTime -= (int) timeChanger;
 				timeChanger = 0f;
 			}
+            DisplayTime();
 		}
 	}
 
