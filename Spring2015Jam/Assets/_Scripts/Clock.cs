@@ -16,19 +16,25 @@ public class Clock : MonoBehaviour {
 	float delay = 0f;
 	public bool positiveRange = true;
 	float timeChanger = 0f;
+	public Text ClockLife;
 	public Text ClockTime;
-
-
+	public Text ClockRange;
+	public Scrollbar slid;
 	void Start () {
 		GameManager = GameObject.Find ("GameManager");
-		lifeTime = Random.Range (minLife, maxLife);
 		killRange = Random.Range (minRange, maxRange);
 		currentTime = 770;
-		InvokeRepeating ("UpdateClockTime", 1.0f, 0.2f);
+		lifeTime = Random.Range (minLife, maxLife);
+		setClockLife ();
+		setKillRange ();
+		hour = min = 0;
+		InvokeRepeating ("UpdateClockTime", 1f, 0.2f);
+		InvokeRepeating ("LowerLifeTime", 0f, 1f);
 		infoCard.gameObject.SetActive (false);
+
 	}
 	
-	// Update is called once per frame
+
 	void FixedUpdate () {
 //		delay += 5 * Time.deltaTime;
 //		if (delay >= 2) {
@@ -46,23 +52,45 @@ public class Clock : MonoBehaviour {
 
 
 	}
+
 	void CheckLimits(){
-		if (lifeTime <= 0)
-			Debug.Log ("im deaD");
-		//if (game_hour <= currentTime+killRange && positiveRange)
-		//	Debug.Log ("explosion");
+		if (lifeTime <= 0) {
+			currentTime = 0;
+			hour = 0;
+		}
 	}
+
+	void setClockLife (){
+		ParseTime (ClockLife, (currentTime + lifeTime));
+	}
+
+	void setKillRange (){
+		ClockRange.text = killRange + "Min";
+	}
+
+	void ParseTime(Text t, int minutes){
+		hour = minutes / 60;
+		if (hour > 12) {
+			hour -=(12*(hour/12));
+		}
+		min = currentTime % 60;
+		string minute="";
+		if(min<10)
+			minute = "0";
+		t.text = (hour + ":" + minute + min).ToString ();
+	}
+
 
 	void UpdateClockTime(){
 		currentTime += 1;
-		lifeTime -= 1;
-		hour = currentTime / 60;
-		if (hour > 12) {
-			hour = hour-(12*(hour/12));
-		}
-		min = currentTime % 60;
+
 		CheckLimits ();
-		printTime ();
+		ParseTime (ClockTime, currentTime);
+	}
+
+	void LowerLifeTime (){
+		lifeTime--;
+		slid.size -= 0.2f;
 	}
 
 	void printTime(){
