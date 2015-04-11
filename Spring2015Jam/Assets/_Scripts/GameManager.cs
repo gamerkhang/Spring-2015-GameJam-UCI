@@ -64,12 +64,10 @@ public class GameManager : MonoBehaviour {
 		t.text = string.Format ("{0:D2}:{1:D2}", gameHour, gameMinute);
 	}
 
-//	void ShowClock () {
-//		clockText.text = 
-//	}
 
-	void SpawnClock () {
+	void ShowClock () {
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?
+        //set the chosen one active
 	}
 	
 	public void AddLife () {

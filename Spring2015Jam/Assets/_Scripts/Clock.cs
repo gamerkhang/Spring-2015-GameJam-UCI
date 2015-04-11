@@ -4,17 +4,16 @@ using UnityEngine.UI;
 
 
 public class Clock : MonoBehaviour {
-	public int lifeTime, killRange;
+	public int timeToSuccess, failureThreshold;
 
-	public float lifeTimeTickRate;
-	public float tickRate;
+	public float successTickRate;
+	public float clockTickRate;
 
 	public GameObject infoCard;
 
-	public int maxLife;
-	public int minLife;
-	public int maxRange;
-	public int minRange;
+    public int minTimeOffset, maxTimeOffset;
+	public int minSuccessTime, maxSuccessTime;
+	public int minThreshold, maxThreshold;
 
 	public int hour, min, currentTime;
 
@@ -22,36 +21,23 @@ public class Clock : MonoBehaviour {
 
 	public bool positiveRange = true;
 	
-	float timeChanger = 0f;
-
-	public Text ClockLife;
-	public Text ClockTime;
-	public Text ClockRange;
-	public Scrollbar slid;
-
-	//float multiplier = 0f;
+    public Slider SliderSuccess;
+	public Text TextClock;
+	public Text TextThreshold;
 
 	void Start () {
-		lifeTimeTickRate = GameManager.universalTickRate;
+		successTickRate = GameManager.universalTickRate;
 
-		currentTime = GameManager.CurrentUniversalTime + 5;
-		lifeTime = Random.Range (minLife, maxLife);
-		killRange = Random.Range (minRange, maxRange);
-		setClockLife ();
-		setKillRange ();
-		InvokeRepeating ("UpdateClockTime", 0f, lifeTimeTickRate);
-		InvokeRepeating ("LowerLifeTime", 0f, tickRate);
+        currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
+		timeToSuccess = Random.Range (minSuccessTime, maxSuccessTime);
+		failureThreshold = Random.Range (minThreshold, maxThreshold);
+
+        SliderSuccess.maxValue = timeToSuccess;
+        TextThreshold.text = failureThreshold + " Min";
+
+		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
+		InvokeRepeating ("UpdateTimeToSuccess", 0f, successTickRate);
 		infoCard.gameObject.SetActive (false);
-		//multiplier = (float)1/lifeTime;
-
-	}
-
-	void setClockLife (){
-		ParseTime (ClockLife, lifeTime);
-	}
-
-	void setKillRange (){
-		ClockRange.text = killRange + " Min";
 	}
 
 	void ParseTime(Text t, int minutes){
@@ -60,9 +46,6 @@ public class Clock : MonoBehaviour {
 			hour -=(12*(hour/12));
 		}
 		min = minutes % 60;
-		string minute="";
-		if(min<10)
-			minute = "0";
 		t.text = string.Format ("{0:D2}:{1:D2}", hour, min);
 	}
 
@@ -70,38 +53,28 @@ public class Clock : MonoBehaviour {
 	void UpdateClockTime(){
 		currentTime += 1;
 		CheckLimits ();
-		ParseTime (ClockTime, currentTime);
+		ParseTime (TextClock, currentTime);
 	}
 
 	void CheckLimits(){
-		if (lifeTime <= 0 && ClockAlive) {
-			//lifeTime=1;
-			currentTime = 0;
-			hour = 0;
-			gameObject.SetActive(false);
-		} else if (positiveRange) {
-			if ((currentTime - GameManager.getUniversalTime ()) >= killRange) {
-				GameManager.LoseLife ();
-				ClockAlive=false;
-				killRange = 999;
-				setKillRange ();
-			}
-		} else if ((GameManager.getUniversalTime () - currentTime) >= killRange) {
-			GameManager.LoseLife ();
-			ClockAlive=false;
-			killRange = 999;
-			setKillRange ();
-		}
+        if (Mathf.Abs(GameManager.getUniversalTime() - currentTime) >= failureThreshold)
+        {
+            GameManager.LoseLife();
+            DisableClock();
+        };
 	}
 
-	void LowerLifeTime (){
-		if (ClockAlive) {
-			lifeTime--;
-			setClockLife ();
-		}
+    void UpdateTimeToSuccess()
+    {
+		timeToSuccess--;
+        SliderSuccess.value = timeToSuccess;
+
+        if (timeToSuccess <= 0)
+            DisableClock();
 	}
 
 	void OnMouseOver(){
+        float timeChanger = 0f;
 		if (Input.GetMouseButton(0)) { //left button
 			timeChanger += .25f;
 			if( timeChanger > 1){
@@ -125,4 +98,24 @@ public class Clock : MonoBehaviour {
 	void OnMouseExit(){
 		infoCard.gameObject.SetActive(false);
 	}
+
+    void DisableClock()
+    {
+        CancelInvoke("UpdateTimeToSuccess");
+        CancelInvoke("UpdateClockTime");
+        gameObject.SetActive(false);
+    }
+
+    void StartClock()
+    {
+        currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
+        timeToSuccess = Random.Range(minSuccessTime, maxSuccessTime);
+        failureThreshold = Random.Range(minThreshold, maxThreshold);
+
+        SliderSuccess.maxValue = timeToSuccess;
+        TextThreshold.text = failureThreshold + " Min";
+
+        InvokeRepeating("UpdateClockTime", 0f, clockTickRate);
+        InvokeRepeating("UpdateTimeToSuccess", 0f, successTickRate);
+    }
 }
