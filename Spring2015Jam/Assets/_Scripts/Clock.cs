@@ -20,6 +20,8 @@ public class Clock : MonoBehaviour {
 	public Text ClockTime;
 	public Text ClockRange;
 	public Scrollbar slid;
+	float multiplier = 0f;
+
 	void Start () {
 		GameManager = GameObject.Find ("GameManager");
 		killRange = Random.Range (minRange, maxRange);
@@ -31,7 +33,7 @@ public class Clock : MonoBehaviour {
 		InvokeRepeating ("UpdateClockTime", 1f, 0.2f);
 		InvokeRepeating ("LowerLifeTime", 0f, 1f);
 		infoCard.gameObject.SetActive (false);
-
+		multiplier = (float)1/lifeTime;
 	}
 	
 
@@ -90,7 +92,7 @@ public class Clock : MonoBehaviour {
 
 	void LowerLifeTime (){
 		lifeTime--;
-		slid.size -= 0.2f;
+		slid.size -= multiplier;
 	}
 
 	void printTime(){
