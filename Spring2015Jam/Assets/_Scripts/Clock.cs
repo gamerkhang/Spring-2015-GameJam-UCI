@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 
 public class Clock : MonoBehaviour {
-	int lifeTime, killRange;
+	public int lifeTime, killRange;
 
-	public float changing_rate;
+	public float tickRate;
 
 	public GameObject infoCard;
 
@@ -15,9 +15,9 @@ public class Clock : MonoBehaviour {
 	public int maxRange;
 	public int minRange;
 
-	int hour, min, currentTime;
+	public int hour, min, currentTime;
 
-	bool ClockAlive = true;
+	public bool ClockAlive = true;
 
 	public bool positiveRange = true;
 	
@@ -28,20 +28,18 @@ public class Clock : MonoBehaviour {
 	public Text ClockRange;
 	public Scrollbar slid;
 
-	float multiplier = 0f;
+	//float multiplier = 0f;
 
 	void Start () {
-
-		killRange = Random.Range (minRange, maxRange);
-		currentTime = 725;
+		currentTime = GameManager.CurrentUniversalTime + 5;
 		lifeTime = Random.Range (minLife, maxLife);
+		killRange = Random.Range (minRange, maxRange);
 		setClockLife ();
 		setKillRange ();
-		hour = min = 0;
-		InvokeRepeating ("UpdateClockTime", 0f, changing_rate);
-		InvokeRepeating ("LowerLifeTime", 0f, changing_rate);
+		InvokeRepeating ("UpdateClockTime", 0f, tickRate);
+		InvokeRepeating ("LowerLifeTime", 0f, tickRate);
 		infoCard.gameObject.SetActive (false);
-		multiplier = (float)1/lifeTime;
+		//multiplier = (float)1/lifeTime;
 
 	}
 
@@ -77,6 +75,7 @@ public class Clock : MonoBehaviour {
 			lifeTime=1;
 			currentTime = 0;
 			hour = 0;
+			gameObject.SetActive(false);
 		} else if (positiveRange) {
 			if ((currentTime - GameManager.getUniversalTime ()) >= killRange) {
 				GameManager.LoseLife ();
@@ -95,7 +94,6 @@ public class Clock : MonoBehaviour {
 	void LowerLifeTime (){
 		if (ClockAlive) {
 			lifeTime--;
-			slid.size -= multiplier;
 			setClockLife ();
 		}
 	}

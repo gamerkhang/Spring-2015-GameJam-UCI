@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
 			return;
 
 		//ShowClock();
+		livesText.text = lives.ToString();
 		
 		if (lives <= 0) {
 			GameOver();
