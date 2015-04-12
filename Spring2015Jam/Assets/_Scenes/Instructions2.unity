@@ -126,7 +126,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.41338825
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -725,7 +725,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 799.999939, y: 353.80835}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1238991459
 GameObject:
