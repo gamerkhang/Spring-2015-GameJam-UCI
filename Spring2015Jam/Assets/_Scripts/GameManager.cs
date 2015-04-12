@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	public static int CurrentUniversalTime = 720;
 	public static int currentAmountClocks, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
-	public static float universalTickRate = 0.2f;
+	public static float universalTickRate = 1f;
 	public float clockSpawnRate = 30.0f;
 	public float difficultyIncreaseRate = 60.0f;
 	public int maxDifficulty = 8;
@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		foreach (GameObject clock in spawnableClocks)
 			clock.SetActive(false);
-		universalTickRate = 0.2f;
 		InvokeRepeating("UpdateUniversalClock", 0f, universalTickRate);
 		InvokeRepeating("AddClock", 0f, clockSpawnRate);
 		InvokeRepeating("IncreaseMaxClocks", 0f, difficultyIncreaseRate);

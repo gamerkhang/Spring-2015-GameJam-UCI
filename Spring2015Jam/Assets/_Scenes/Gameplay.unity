@@ -87,13 +87,212 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &483935270
+--- !u!1 &151475513
+GameObject:
+  m_PrefabParentObject: {fileID: 175452, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &151475517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 151475513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!1 &290140650
+GameObject:
+  m_PrefabParentObject: {fileID: 174824, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!1 &516356545
+GameObject:
+  m_PrefabParentObject: {fileID: 162680, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &516356549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516356545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!114 &578373506
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11464214, guid: 16f18d9a4e20a044f82a8fb62a59baed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &778604878
+GameObject:
+  m_PrefabParentObject: {fileID: 159772, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &778604882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 778604878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!114 &940101220
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11463604, guid: 16f18d9a4e20a044f82a8fb62a59baed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1155111731
+GameObject:
+  m_PrefabParentObject: {fileID: 131020, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!1 &1241034928
+GameObject:
+  m_PrefabParentObject: {fileID: 181268, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &1241034932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241034928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!1 &1347563434
+GameObject:
+  m_PrefabParentObject: {fileID: 164096, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &1347563438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347563434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!1001 &1481461538
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11423804, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: spawnableClocks.Array.size
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 486400, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: m_LocalPosition.x
       value: .427354038
@@ -126,73 +325,274 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 90
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 940101220}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: infoCard
+      value: 
+      objectReference: {fileID: 290140650}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: TextThreshold
+      value: 
+      objectReference: {fileID: 578373506}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: infoCard
+      value: 
+      objectReference: {fileID: 290140650}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 940101220}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: TextClock
+      value: 
+      objectReference: {fileID: 1630161885}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: TextClock
+      value: 
+      objectReference: {fileID: 1630161885}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: TextThreshold
+      value: 
+      objectReference: {fileID: 578373506}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minTimeOffset
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .0222094804
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minTimeOffset
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .0222094804
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minTimeOffset
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .0222094804
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minTimeOffset
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -.427354038
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minTimeOffset
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -.0649507046
-      objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 450.258179
-      objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_Pivot.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22497598, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_Pivot.y
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22364010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-      propertyPath: m_RenderMode
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxTimeOffset
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxTimeOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxTimeOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxTimeOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxTimeOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clickChangeRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clickChangeRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clickChangeRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clickChangeRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clickChangeRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423804, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: spawnableClocks.Array.data[11]
+      value: 
+      objectReference: {fileID: 1155111731}
+    - target: {fileID: 11467492, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483936, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443070, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466118, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423908, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446150, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11447294, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406288, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472940, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403814, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475534, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410196, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: speed
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423804, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxDifficulty
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423804, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: universalTickRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minSuccessTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minSuccessTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minSuccessTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minSuccessTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minSuccessTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxSuccessTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxSuccessTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxSuccessTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxSuccessTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxSuccessTime
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1158830272
+--- !u!1 &1560078755
 GameObject:
-  m_PrefabParentObject: {fileID: 127716, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
-  m_PrefabInternal: {fileID: 483935270}
---- !u!114 &1158830275
+  m_PrefabParentObject: {fileID: 182102, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &1560078759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1158830272}
+  m_GameObject: {fileID: 1560078755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f51c27869cc9084194c84c648e22721, type: 3}
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCamera: {fileID: 1320038865}
-  shakeAmount: .699999988
-  decreaseFactor: 1
---- !u!20 &1320038865
-Camera:
-  m_PrefabParentObject: {fileID: 2017556, guid: 16f18d9a4e20a044f82a8fb62a59baed,
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!1 &1624969467
+GameObject:
+  m_PrefabParentObject: {fileID: 195326, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 1481461538}
+--- !u!114 &1624969471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624969467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSuccess: 0
+  failureThreshold: 0
+  successTickRate: .200000003
+  clockTickRate: .200000003
+  infoCard: {fileID: 290140650}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 15
+  maxSuccessTime: 30
+  minThreshold: 30
+  maxThreshold: 60
+  hour: 0
+  min: 0
+  currentTime: 0
+  ClockAlive: 1
+  positiveRange: 1
+  HealthBar: {fileID: 940101220}
+  TextClock: {fileID: 1630161885}
+  TextThreshold: {fileID: 578373506}
+  clickChangeRate: 1
+--- !u!114 &1630161885
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11499584, guid: 16f18d9a4e20a044f82a8fb62a59baed,
     type: 2}
-  m_PrefabInternal: {fileID: 483935270}
+  m_PrefabInternal: {fileID: 1481461538}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}

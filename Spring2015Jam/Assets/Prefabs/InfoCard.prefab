@@ -65,7 +65,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &171546
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 59 Min
 --- !u!114 &11482414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 03:24
 --- !u!222 &22202388
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -29,6 +29,7 @@ public class Clock : MonoBehaviour {
 	float timeChanger = 0f;
 	
 	float LifeMultiplier = 0f;
+	float HealthAmount = 1f;
 	
 	void Start () {
 		successTickRate = GameManager.universalTickRate;
@@ -73,8 +74,9 @@ public class Clock : MonoBehaviour {
 	
 	void UpdateTimeToSuccess()
 	{
+		HealthAmount -= LifeMultiplier;
 		timeToSuccess--;
-		HealthBar.fillAmount -= LifeMultiplier;
+
 		
 		if (timeToSuccess <= 0)
 			DisableClock();
@@ -84,6 +86,7 @@ public class Clock : MonoBehaviour {
 		if (Time.timeScale == 0)
 			return;
 
+		HealthBar.fillAmount = HealthAmount;
 		if (Input.GetMouseButton(0)) { //left button, speedup
 			timeChanger += clickChangeRate;
 			if( timeChanger > 1){
@@ -105,6 +108,10 @@ public class Clock : MonoBehaviour {
 	void OnMouseEnter(){
 		if (Time.timeScale == 0)
 			return;
+		
+		HealthBar.fillAmount = HealthAmount;
+		TextThreshold.text = failureThreshold + " Min";
+
 		infoCard.gameObject.SetActive(true);
 	}
 	
@@ -129,10 +136,8 @@ public class Clock : MonoBehaviour {
 		timeToSuccess = Random.Range(minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range(minThreshold, maxThreshold);
 		
-		HealthBar.fillAmount = 1;
 		LifeMultiplier = (float) 1 / timeToSuccess;
-		TextThreshold.text = failureThreshold + " Min";
-		
+		HealthAmount = 1;
 		InvokeRepeating("UpdateClockTime", 0f, clockTickRate);
 		InvokeRepeating("UpdateTimeToSuccess", 0f, successTickRate);
 	}
