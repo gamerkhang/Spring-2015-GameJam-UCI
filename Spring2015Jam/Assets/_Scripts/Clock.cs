@@ -80,7 +80,10 @@ public class Clock : MonoBehaviour {
 			DisableClock();
 	}
 	
-	void OnMouseOver(){        
+	void OnMouseOver(){
+		if (Time.timeScale == 0)
+			return;
+
 		if (Input.GetMouseButton(0)) { //left button, speedup
 			timeChanger += clickChangeRate;
 			if( timeChanger > 1){
@@ -100,10 +103,14 @@ public class Clock : MonoBehaviour {
 	}
 	
 	void OnMouseEnter(){
+		if (Time.timeScale == 0)
+			return;
 		infoCard.gameObject.SetActive(true);
 	}
 	
 	void OnMouseExit(){
+		if (Time.timeScale == 0)
+			return;
 		infoCard.gameObject.SetActive(false);
 	}
 	

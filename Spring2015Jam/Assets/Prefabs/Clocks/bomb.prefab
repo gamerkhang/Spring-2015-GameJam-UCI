@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be90bb8818474684ca26149afc9e0558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: -10
 --- !u!114 &11477418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,8 +238,8 @@ MonoBehaviour:
   successTickRate: .200000003
   clockTickRate: .200000003
   infoCard: {fileID: 0}
-  minTimeOffset: 80
-  maxTimeOffset: 40
+  minTimeOffset: 10
+  maxTimeOffset: 20
   minSuccessTime: 60
   maxSuccessTime: 90
   minThreshold: 30
@@ -252,7 +252,7 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   TextClock: {fileID: 0}
   TextThreshold: {fileID: 0}
-  clickChangeRate: 0
+  clickChangeRate: .5
 --- !u!212 &21204746
 SpriteRenderer:
   m_ObjectHideFlags: 1

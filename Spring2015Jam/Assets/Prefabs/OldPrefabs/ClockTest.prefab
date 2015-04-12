@@ -178,7 +178,7 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 0
-  ClockHealthBar: {fileID: 0}
+  HealthBar: {fileID: 0}
   TextClock: {fileID: 0}
   TextThreshold: {fileID: 0}
   clickChangeRate: 0
