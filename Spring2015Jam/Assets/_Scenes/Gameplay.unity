@@ -291,7 +291,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.70000005
+  clockTickRate: 3
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -759,7 +759,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 2
+  clockTickRate: 2.20000005
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 2.0999999
+  clockTickRate: 2.5
   infoCard: {fileID: 1824256484}
   minTimeOffset: 5
   maxTimeOffset: 10
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .699999988
+  clockTickRate: .600000024
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -2039,7 +2039,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .5
+  clockTickRate: .449999988
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -3407,7 +3407,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.79999995
+  clockTickRate: 2
   infoCard: {fileID: 1824256484}
   minTimeOffset: 12
   maxTimeOffset: 15
@@ -3891,7 +3891,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .649999976
+  clockTickRate: .5
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -4098,12 +4098,12 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 2.29999995
+  clockTickRate: 3
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 100
-  maxSuccessTime: 160
+  minSuccessTime: 30
+  maxSuccessTime: 45
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -4445,8 +4445,8 @@ MonoBehaviour:
   maxTimeOffset: 2
   minSuccessTime: 200
   maxSuccessTime: 300
-  minThreshold: 10
-  maxThreshold: 12
+  minThreshold: 15
+  maxThreshold: 17
   hour: 0
   min: 0
   currentTime: 0
@@ -4773,7 +4773,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .75
+  clockTickRate: .649999976
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -5058,7 +5058,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.89999998
+  clockTickRate: 1e+07
   infoCard: {fileID: 1824256484}
   minTimeOffset: 1
   maxTimeOffset: 2
