@@ -143,7 +143,7 @@ public class Clock : MonoBehaviour {
 		CancelInvoke("UpdateClockTime");
 		gameObject.SetActive(false);
 		infoCard.gameObject.SetActive(false);
-
+		CursorChange.ChangeBack();
         this.GetComponent<RedOnWarning>().ResetColor();
 	}
 	
