@@ -173,3 +173,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1158830272
+GameObject:
+  m_PrefabParentObject: {fileID: 127716, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabInternal: {fileID: 483935270}
+--- !u!114 &1158830275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158830272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f51c27869cc9084194c84c648e22721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 1320038865}
+  shakeAmount: .699999988
+  decreaseFactor: 1
+--- !u!20 &1320038865
+Camera:
+  m_PrefabParentObject: {fileID: 2017556, guid: 16f18d9a4e20a044f82a8fb62a59baed,
+    type: 2}
+  m_PrefabInternal: {fileID: 483935270}

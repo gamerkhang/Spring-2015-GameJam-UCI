@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour {
 	
 	public static void LoseLife () {
 		lives--;
+		ScreenShake.shake = 1f;
 	}
 	
 	public static int getUniversalTime (){
