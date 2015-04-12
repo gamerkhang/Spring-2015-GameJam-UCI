@@ -21,7 +21,7 @@ public class Clock : MonoBehaviour {
 
 	public bool positiveRange = true;
 	
-    public Image ClockHealthBar;
+    public Image HealthBar;
 	public Text TextClock;
 	public Text TextThreshold;
 
@@ -40,9 +40,9 @@ public class Clock : MonoBehaviour {
         //SliderSuccess.maxValue = timeToSuccess;
         TextThreshold.text = failureThreshold + " Min";
 
-		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
-		InvokeRepeating ("UpdateTimeToSuccess", 0f, successTickRate);
-		infoCard.gameObject.SetActive (false);
+//		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
+//		InvokeRepeating ("UpdateTimeToSuccess", 0f, successTickRate);
+//		infoCard.gameObject.SetActive (false);
 
 		LifeMultiplier = (float) 1 / timeToSuccess;
 	}
@@ -74,7 +74,7 @@ public class Clock : MonoBehaviour {
     void UpdateTimeToSuccess()
     {
 		timeToSuccess--;
-		ClockHealthBar.fillAmount -= LifeMultiplier;
+		HealthBar.fillAmount -= LifeMultiplier;
 
         if (timeToSuccess <= 0)
             DisableClock();
@@ -109,19 +109,21 @@ public class Clock : MonoBehaviour {
 
     void DisableClock()
     {
+		GameManager.currentAmountClocks--;
         CancelInvoke("UpdateTimeToSuccess");
         CancelInvoke("UpdateClockTime");
         gameObject.SetActive(false);
 		infoCard.gameObject.SetActive(false);
     }
 
-    void StartClock()
-    {
-        currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
+    public void StartClock()
+	{
+		currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
         timeToSuccess = Random.Range(minSuccessTime, maxSuccessTime);
         failureThreshold = Random.Range(minThreshold, maxThreshold);
 
-//        SliderSuccess.maxValue = timeToSuccess;
+		HealthBar.fillAmount = 1;
+		LifeMultiplier = (float) 1 / timeToSuccess;
         TextThreshold.text = failureThreshold + " Min";
 
         InvokeRepeating("UpdateClockTime", 0f, clockTickRate);
