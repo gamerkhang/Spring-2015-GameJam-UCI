@@ -22,6 +22,9 @@ public class Clock : MonoBehaviour {
 	public bool positiveRange = true;
 	
 	public Image HealthBar;
+	public Image RightTreshold;
+	public Image LeftTreshold;
+
 	public Text TextClock;
 	public Text TextThreshold;
 	
@@ -29,7 +32,11 @@ public class Clock : MonoBehaviour {
 	float timeChanger = 0f;
 	
 	float LifeMultiplier = 0f;
+
 	float HealthAmount = 1f;
+
+
+	bool isMouseOver = false;
 	
 	void Start () {
 		successTickRate = GameManager.universalTickRate;
@@ -38,12 +45,11 @@ public class Clock : MonoBehaviour {
 		timeToSuccess = Random.Range (minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range (minThreshold, maxThreshold);
 
-		TextThreshold.text = failureThreshold + " Min";
+		//TextThreshold.text = failureThreshold + " Min";
 		
 		//		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
 		//		InvokeRepeating ("UpdateTimeToSuccess", 0f, successTickRate);
 		//		infoCard.gameObject.SetActive (false);
-		
 		LifeMultiplier = (float) 1 / timeToSuccess;
 	}
 	
@@ -66,10 +72,31 @@ public class Clock : MonoBehaviour {
 		currentTime += 1;
 		CheckFailure ();
 	}
-	
+
+
+	void ControlTresholdBar(float fillingValue){
+		int TresholdValue = currentTime - GameManager.getUniversalTime ();
+		if (TresholdValue < 0) {
+			LeftTreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
+			LeftTreshold.fillAmount = fillingValue;
+			RightTreshold.fillAmount = 0f;
+		}
+		else if (TresholdValue > 0) {
+			RightTreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
+			RightTreshold.fillAmount = fillingValue;
+			LeftTreshold.fillAmount = 0f;
+		}
+	}
+
+
 	void CheckFailure(){
         int absDifference = Mathf.Abs(GameManager.getUniversalTime() - currentTime);
+
         float redIntensity = (float)absDifference / failureThreshold;
+
+		if(isMouseOver) 
+			ControlTresholdBar (redIntensity);
+
         if (redIntensity >= 0.7f) //possibly change?
             this.GetComponent<RedOnWarning>().SetRed(redIntensity);
         else
@@ -80,6 +107,8 @@ public class Clock : MonoBehaviour {
 			GameManager.LoseLife();
 			DisableClock();
 		}
+
+
 	}
 	
 	void UpdateTimeToSuccess()
@@ -115,6 +144,7 @@ public class Clock : MonoBehaviour {
 			}
             CheckFailure();
 		}
+		CheckFailure();
 		DisplayTime();
 	}
 	
@@ -123,14 +153,17 @@ public class Clock : MonoBehaviour {
 			return;
 		
 		HealthBar.fillAmount = HealthAmount;
+		CheckFailure ();
 		TextThreshold.text = failureThreshold + " Min";
 		DisplayTime();
+		isMouseOver = true;
 		infoCard.gameObject.SetActive(true);
 	}
 	
 	void OnMouseExit(){
 		if (Time.timeScale == 0)
 			return;
+		isMouseOver = false;
 		infoCard.gameObject.SetActive(false);
 		CursorChange.ChangeBack();
 	}
