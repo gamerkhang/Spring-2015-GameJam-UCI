@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour {
 
 
 	void AddClock () {
-		if ()
+//		if ()
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?
         //set the chosen one active
 	}
