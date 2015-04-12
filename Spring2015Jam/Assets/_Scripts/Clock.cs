@@ -37,8 +37,7 @@ public class Clock : MonoBehaviour {
 		currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
 		timeToSuccess = Random.Range (minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range (minThreshold, maxThreshold);
-		
-		//SliderSuccess.maxValue = timeToSuccess;
+
 		TextThreshold.text = failureThreshold + " Min";
 		
 		//		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
