@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour {
 	public Text clockText;
 	public Text livesText;
 	int gameHour = 0, gameMinute = 0;
-	public static int lives = 5;
-	public static int CurrentUniversalTime = 720;
-	public static int currentAmountClocks, minClocks = 1, maxClocks = 1;
+	public int lives = 5;
+	public int CurrentUniversalTime = 720;
+	public int currentAmountClocks, minClocks = 1, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
 	public static float universalTickRate = 1f;
 	public float clockSpawnRate = 30.0f;
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour {
 		
 		if (Time.timeScale == 0)
 			return;
-		livesText.text = lives.ToString();
+		livesText.text = "x " + lives.ToString();
 		if (lives <= 0) {
 			Invoke("GameOver", 1f);
 		}
@@ -103,11 +103,17 @@ public class GameManager : MonoBehaviour {
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?
 		//set the chosen one active
 	}
+
+	public void RemoveClock() {
+		currentAmountClocks--;
+		if (currentAmountClocks < minClocks)
+			AddClock();
+	}
 	
 	void IncreaseMaxClocks() {
 		if (maxClocks < maxDifficulty)
 		{
-			if (minClocks == 1 && maxClocks != 1)
+			if (!(minClocks == 1 && maxClocks == 1))
 				minClocks *= 2;
 			maxClocks *= 2;
 		}
@@ -119,16 +125,14 @@ public class GameManager : MonoBehaviour {
 		lives++;
 	}
 	
-	public static void LoseLife () {
+	public void LoseLife () {
 		lives--;
 		ScreenShake.shake = 1f;
 	}
 	
-	public static int getUniversalTime (){
-		return CurrentUniversalTime;
-	}
-	
 	public void GameOver () {
+		minClocks = 1;
+		maxClocks = 1;
 		CancelInvoke("UpdateUniversalClock");
 		CancelInvoke("AddClock");
 		CancelInvoke("IncreaseMaxClocks");

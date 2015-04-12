@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 
 public class Clock : MonoBehaviour {
+	public GameManager manager;
 	public int timeToSuccess, failureThreshold;
 	
 	public float successTickRate;
@@ -22,8 +23,8 @@ public class Clock : MonoBehaviour {
 	public bool positiveRange = true;
 	
 	public Image HealthBar;
-	public Image RightTreshold;
-	public Image LeftTreshold;
+	public Image RightThreshold;
+	public Image LeftThreshold;
 
 	public Text TextClock;
 	
@@ -36,12 +37,17 @@ public class Clock : MonoBehaviour {
 
 
 	bool isMouseOver = false;
-	
+
+	void Awake()
+	{
+		manager = GameObject.Find("GameManager").GetComponent<GameManager>(); 
+	}
+
 	void Start () 
 	{
 		successTickRate = GameManager.universalTickRate;
 		
-		currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
+		currentTime = manager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
 		timeToSuccess = Random.Range (minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range (minThreshold, maxThreshold);
 		
@@ -78,29 +84,29 @@ public class Clock : MonoBehaviour {
 		CheckFailure ();
 	}
 	
-	void ControlTresholdBar(float fillingValue)
+	void ControlThresholdBar(float fillingValue)
 	{
-		int TresholdValue = currentTime - GameManager.getUniversalTime ();
-		if (TresholdValue < 0) {
-			LeftTreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
-			LeftTreshold.fillAmount = fillingValue;
-			RightTreshold.fillAmount = 0f;
+		int ThresholdValue = currentTime - manager.CurrentUniversalTime;
+		if (ThresholdValue < 0) {
+			LeftThreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
+			LeftThreshold.fillAmount = fillingValue;
+			RightThreshold.fillAmount = 0f;
 		}
-		else if (TresholdValue > 0) {
-			RightTreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
-			RightTreshold.fillAmount = fillingValue;
-			LeftTreshold.fillAmount = 0f;
+		else if (ThresholdValue > 0) {
+			RightThreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
+			RightThreshold.fillAmount = fillingValue;
+			LeftThreshold.fillAmount = 0f;
 		}
 	}
 	
 	void CheckFailure()
 	{
-        int absDifference = Mathf.Abs(GameManager.getUniversalTime() - currentTime);
+		int absDifference = Mathf.Abs(manager.CurrentUniversalTime - currentTime);
 
         float redIntensity = (float)absDifference / failureThreshold;
 
 		if(isMouseOver) 
-			ControlTresholdBar (redIntensity);
+			ControlThresholdBar (redIntensity);
 
         if (redIntensity >= 0.7f) //possibly change?
             this.GetComponent<RedOnWarning>().SetRed(redIntensity);
@@ -109,7 +115,7 @@ public class Clock : MonoBehaviour {
 
 		if (absDifference >= failureThreshold)
 		{
-			GameManager.LoseLife();
+			manager.LoseLife();
 			DisableClock();
 		}
 	}
@@ -173,7 +179,7 @@ public class Clock : MonoBehaviour {
 	
 	void DisableClock()
 	{
-		GameManager.currentAmountClocks--;
+		manager.RemoveClock();
 		CancelInvoke("UpdateTimeToSuccess");
 		CancelInvoke("UpdateClockTime");
 		gameObject.SetActive(false);
@@ -184,7 +190,7 @@ public class Clock : MonoBehaviour {
 	
 	public void StartClock()
 	{
-		currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
+		currentTime = manager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
 		timeToSuccess = Random.Range(minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range(minThreshold, maxThreshold);
 		

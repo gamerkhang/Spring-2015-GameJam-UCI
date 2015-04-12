@@ -274,6 +274,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11461568, guid: bfe5e4190651f0944ad2d1cebcf00225, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11461568, guid: bfe5e4190651f0944ad2d1cebcf00225, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe5e4190651f0944ad2d1cebcf00225, type: 2}
   m_IsPrefabParent: 0
@@ -696,11 +704,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 418644, guid: 1e277348feb3357498e4359922326cd0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.69999981
+      value: 6.98000002
       objectReference: {fileID: 0}
     - target: {fileID: 418644, guid: 1e277348feb3357498e4359922326cd0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.04999995
+      value: 2.8499999
       objectReference: {fileID: 0}
     - target: {fileID: 418644, guid: 1e277348feb3357498e4359922326cd0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -746,6 +754,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11401322, guid: 1e277348feb3357498e4359922326cd0, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11401322, guid: 1e277348feb3357498e4359922326cd0, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e277348feb3357498e4359922326cd0, type: 2}
   m_IsPrefabParent: 0
@@ -936,6 +952,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11442438, guid: ff9a1c0be9bf3344a8a0ee6af1af1789, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11442438, guid: ff9a1c0be9bf3344a8a0ee6af1af1789, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff9a1c0be9bf3344a8a0ee6af1af1789, type: 2}
   m_IsPrefabParent: 0
@@ -998,6 +1022,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11461832, guid: d272fb733aa35a34bb095f376d4ec6d8, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11461832, guid: d272fb733aa35a34bb095f376d4ec6d8, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d272fb733aa35a34bb095f376d4ec6d8, type: 2}
   m_IsPrefabParent: 0
@@ -1060,6 +1092,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11453262, guid: b48b4210db13dd54faf27b6294c8bd8b, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11453262, guid: b48b4210db13dd54faf27b6294c8bd8b, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b48b4210db13dd54faf27b6294c8bd8b, type: 2}
   m_IsPrefabParent: 0
@@ -1496,10 +1536,15 @@ MonoBehaviour:
   - {fileID: 2134220808}
   clockText: {fileID: 906916669}
   livesText: {fileID: 1722189676}
+  lives: 5
+  CurrentUniversalTime: 720
+  currentAmountClocks: 0
+  minClocks: 1
+  maxClocks: 1
   pauseMenu: {fileID: 1498651459}
   gameOverMenu: {fileID: 1128602889}
   clockSpawnRate: 5
-  difficultyIncreaseRate: 30
+  difficultyIncreaseRate: 10
   maxLives: 3
   maxDifficulty: 8
 --- !u!114 &1038204340
@@ -1854,6 +1899,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11443940, guid: 7ada037129df2e94abd092c6ca27ea72, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11443940, guid: 7ada037129df2e94abd092c6ca27ea72, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ada037129df2e94abd092c6ca27ea72, type: 2}
   m_IsPrefabParent: 0
@@ -1872,27 +1925,62 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1384618711}
+  - 224: {fileID: 1384618711}
+  - 222: {fileID: 1384618713}
+  - 114: {fileID: 1384618712}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1384618711
-Transform:
+--- !u!224 &1384618711
+RectTransform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 498240, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384618710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 470.964966, y: -106.030411, z: 0}
-  m_LocalScale: {x: 45.0258179, y: 45.0258179, z: 45.0258179}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1722189675}
+  - {fileID: 2035414341}
   m_Father: {fileID: 984045164}
   m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 619.200012, y: 47.5}
+  m_SizeDelta: {x: 129.100006, y: 45}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1384618712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384618710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1384618713
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384618710}
 --- !u!1 &1401740476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2283,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11443502, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11443502, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
   m_IsPrefabParent: 0
@@ -2508,6 +2604,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11487054, guid: ff4e5e562822d4549a53daeda46a12e1, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11487054, guid: ff4e5e562822d4549a53daeda46a12e1, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff4e5e562822d4549a53daeda46a12e1, type: 2}
   m_IsPrefabParent: 0
@@ -2582,6 +2686,14 @@ Prefab:
       propertyPath: maxThreshold
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 11470678, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11470678, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
   m_IsPrefabParent: 0
@@ -2782,7 +2894,7 @@ GameObject:
   - 222: {fileID: 1722189677}
   - 114: {fileID: 1722189676}
   m_Layer: 5
-  m_Name: Lives
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2797,14 +2909,14 @@ RectTransform:
   m_GameObject: {fileID: 1722189674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0222094804, y: .0222094804, z: .0222094804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1384618711}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 6.20605469, y: 1.80186844}
-  m_SizeDelta: {x: 85, y: 41}
+  m_AnchoredPosition: {x: 25.7500095, y: 1.56000805}
+  m_SizeDelta: {x: 77.5999985, y: 40.0999985}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1722189676
 MonoBehaviour:
@@ -2832,7 +2944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: x 10
 --- !u!222 &1722189677
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2899,6 +3011,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11471620, guid: d862be266d771fc43a893e54e6c336e0, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11471620, guid: d862be266d771fc43a893e54e6c336e0, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d862be266d771fc43a893e54e6c336e0, type: 2}
   m_IsPrefabParent: 0
@@ -3055,6 +3175,67 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025031325}
+--- !u!1 &2035414340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2035414341}
+  - 222: {fileID: 2035414343}
+  - 114: {fileID: 2035414342}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2035414341
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035414340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1384618711}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -31, y: -7.62939999e-06}
+  m_SizeDelta: {x: 48.2999992, y: 48.2999992}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &2035414342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035414340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8ac484d3fa75e5046b59ac6fbac1c706, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2035414343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035414340}
 --- !u!1001 &2036210463
 Prefab:
   m_ObjectHideFlags: 0
@@ -3114,6 +3295,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11477418, guid: 7698b3191b5f27e49adeec11892dda98, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11477418, guid: 7698b3191b5f27e49adeec11892dda98, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7698b3191b5f27e49adeec11892dda98, type: 2}
   m_IsPrefabParent: 0
@@ -3231,6 +3420,14 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11437236, guid: 20ef29f467984344d8e95ed64755d130, type: 2}
+      propertyPath: RightThreshold
+      value: 
+      objectReference: {fileID: 1423285005}
+    - target: {fileID: 11437236, guid: 20ef29f467984344d8e95ed64755d130, type: 2}
+      propertyPath: LeftThreshold
+      value: 
+      objectReference: {fileID: 981899826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ef29f467984344d8e95ed64755d130, type: 2}
   m_IsPrefabParent: 0
