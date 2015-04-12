@@ -87,7 +87,7 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &151475513
+--- !u!1 &151475513 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 175452, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -104,13 +104,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: 1.35000002
   infoCard: {fileID: 290140650}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 15
-  maxSuccessTime: 30
+  minSuccessTime: 120
+  maxSuccessTime: 140
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -122,11 +122,11 @@ MonoBehaviour:
   TextClock: {fileID: 1630161885}
   TextThreshold: {fileID: 578373506}
   clickChangeRate: 1
---- !u!1 &290140650
+--- !u!1 &290140650 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 174824, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
---- !u!1 &516356545
+--- !u!1 &516356545 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 162680, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -143,15 +143,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: .800000012
   infoCard: {fileID: 290140650}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 15
-  maxSuccessTime: 30
-  minThreshold: 30
-  maxThreshold: 60
+  minSuccessTime: 200
+  maxSuccessTime: 240
+  minThreshold: 45
+  maxThreshold: 75
   hour: 0
   min: 0
   currentTime: 0
@@ -161,13 +161,13 @@ MonoBehaviour:
   TextClock: {fileID: 1630161885}
   TextThreshold: {fileID: 578373506}
   clickChangeRate: 1
---- !u!114 &578373506
+--- !u!114 &578373506 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11464214, guid: 16f18d9a4e20a044f82a8fb62a59baed,
     type: 2}
   m_PrefabInternal: {fileID: 1481461538}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1 &778604878
+--- !u!1 &778604878 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 159772, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -184,15 +184,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
+  successTickRate: 1
   clockTickRate: .200000003
   infoCard: {fileID: 290140650}
-  minTimeOffset: 1
-  maxTimeOffset: 2
+  minTimeOffset: 0
+  maxTimeOffset: 1
   minSuccessTime: 15
-  maxSuccessTime: 30
-  minThreshold: 30
-  maxThreshold: 60
+  maxSuccessTime: 20
+  minThreshold: 45
+  maxThreshold: 75
   hour: 0
   min: 0
   currentTime: 0
@@ -202,17 +202,17 @@ MonoBehaviour:
   TextClock: {fileID: 1630161885}
   TextThreshold: {fileID: 578373506}
   clickChangeRate: 1
---- !u!114 &940101220
+--- !u!114 &940101220 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11463604, guid: 16f18d9a4e20a044f82a8fb62a59baed,
     type: 2}
   m_PrefabInternal: {fileID: 1481461538}
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1 &1155111731
+--- !u!1 &1155111731 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 131020, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
---- !u!1 &1241034928
+--- !u!1 &1241034928 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 181268, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -229,15 +229,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: .949999988
   infoCard: {fileID: 290140650}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 15
-  maxSuccessTime: 30
-  minThreshold: 30
-  maxThreshold: 60
+  minSuccessTime: 20
+  maxSuccessTime: 300
+  minThreshold: 25
+  maxThreshold: 35
   hour: 0
   min: 0
   currentTime: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   TextClock: {fileID: 1630161885}
   TextThreshold: {fileID: 578373506}
   clickChangeRate: 1
---- !u!1 &1347563434
+--- !u!1 &1347563434 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 164096, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -264,13 +264,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: 1.39999998
   infoCard: {fileID: 290140650}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 15
-  maxSuccessTime: 30
+  minSuccessTime: 90
+  maxSuccessTime: 120
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -371,7 +371,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minTimeOffset
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minTimeOffset
@@ -391,7 +391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxTimeOffset
-      value: 2
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxTimeOffset
@@ -471,7 +471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423804, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxDifficulty
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11423804, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: universalTickRate
@@ -479,48 +479,100 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minSuccessTime
-      value: 15
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minSuccessTime
-      value: 15
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minSuccessTime
-      value: 15
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minSuccessTime
-      value: 15
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: minSuccessTime
-      value: 15
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxSuccessTime
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxSuccessTime
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxSuccessTime
-      value: 30
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxSuccessTime
-      value: 30
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
       propertyPath: maxSuccessTime
-      value: 30
+      value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clockTickRate
+      value: 1.04999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: successTickRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clockTickRate
+      value: 1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479304, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: successTickRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: successTickRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clockTickRate
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436622, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxThreshold
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: minThreshold
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444010, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: maxThreshold
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: successTickRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425494, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clockTickRate
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: clockTickRate
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437016, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
+      propertyPath: successTickRate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1560078755
+--- !u!1 &1560078755 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 182102, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -537,13 +589,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: 1.5
   infoCard: {fileID: 290140650}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 15
-  maxSuccessTime: 30
+  minSuccessTime: 60
+  maxSuccessTime: 65
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -555,7 +607,7 @@ MonoBehaviour:
   TextClock: {fileID: 1630161885}
   TextThreshold: {fileID: 578373506}
   clickChangeRate: 1
---- !u!1 &1624969467
+--- !u!1 &1624969467 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 195326, guid: 16f18d9a4e20a044f82a8fb62a59baed, type: 2}
   m_PrefabInternal: {fileID: 1481461538}
@@ -572,13 +624,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: 1.20000005
   infoCard: {fileID: 290140650}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 15
-  maxSuccessTime: 30
+  minSuccessTime: 80
+  maxSuccessTime: 140
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -590,7 +642,7 @@ MonoBehaviour:
   TextClock: {fileID: 1630161885}
   TextThreshold: {fileID: 578373506}
   clickChangeRate: 1
---- !u!114 &1630161885
+--- !u!114 &1630161885 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11499584, guid: 16f18d9a4e20a044f82a8fb62a59baed,
     type: 2}
