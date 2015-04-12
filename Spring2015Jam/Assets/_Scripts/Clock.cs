@@ -26,7 +26,6 @@ public class Clock : MonoBehaviour {
 	public Image LeftTreshold;
 
 	public Text TextClock;
-	public Text TextThreshold;
 	
 	public float clickChangeRate;
 	float timeChanger = 0f;
@@ -38,14 +37,13 @@ public class Clock : MonoBehaviour {
 
 	bool isMouseOver = false;
 	
-	void Start () {
+	void Start () 
+	{
 		successTickRate = GameManager.universalTickRate;
 		
 		currentTime = GameManager.CurrentUniversalTime + Random.Range(minTimeOffset, maxTimeOffset);
 		timeToSuccess = Random.Range (minSuccessTime, maxSuccessTime);
 		failureThreshold = Random.Range (minThreshold, maxThreshold);
-
-		//TextThreshold.text = failureThreshold + " Min";
 		
 		//		InvokeRepeating ("UpdateClockTime", 0f, clockTickRate);
 		//		InvokeRepeating ("UpdateTimeToSuccess", 0f, successTickRate);
@@ -53,7 +51,8 @@ public class Clock : MonoBehaviour {
 		LifeMultiplier = (float) 1 / timeToSuccess;
 	}
 	
-	void DisplayTime(){
+	void DisplayTime()
+	{
 		hour = currentTime / 60;
 		if (hour > 12) {
 			hour -=(12*(hour/12));
@@ -62,19 +61,21 @@ public class Clock : MonoBehaviour {
 		TextClock.text = string.Format ("{0:D2}:{1:D2}", hour, min);
 	}
 	
-	void Update(){
+	void Update()
+	{
 		if (Input.GetMouseButtonUp (0) || Input.GetMouseButtonUp (1)) {
 			CursorChange.ChangeBack();
 		}
 	}
 
-	void UpdateClockTime(){
+	void UpdateClockTime()
+	{
 		currentTime += 1;
 		CheckFailure ();
 	}
-
-
-	void ControlTresholdBar(float fillingValue){
+	
+	void ControlTresholdBar(float fillingValue)
+	{
 		int TresholdValue = currentTime - GameManager.getUniversalTime ();
 		if (TresholdValue < 0) {
 			LeftTreshold.color = (new Vector4(1f, 1f - fillingValue, 1f - fillingValue, 1f));
@@ -87,9 +88,9 @@ public class Clock : MonoBehaviour {
 			LeftTreshold.fillAmount = 0f;
 		}
 	}
-
-
-	void CheckFailure(){
+	
+	void CheckFailure()
+	{
         int absDifference = Mathf.Abs(GameManager.getUniversalTime() - currentTime);
 
         float redIntensity = (float)absDifference / failureThreshold;
@@ -107,8 +108,6 @@ public class Clock : MonoBehaviour {
 			GameManager.LoseLife();
 			DisableClock();
 		}
-
-
 	}
 	
 	void UpdateTimeToSuccess()
@@ -116,7 +115,6 @@ public class Clock : MonoBehaviour {
 		HealthAmount -= LifeMultiplier;
 		timeToSuccess--;
 
-		
 		if (timeToSuccess <= 0)
 			DisableClock();
 	}
@@ -133,7 +131,6 @@ public class Clock : MonoBehaviour {
 				currentTime += (int) timeChanger;
 				timeChanger = 0f;
 			}
-            CheckFailure();
 		}
 		else if (Input.GetMouseButton(1)) { //right button, slowdown
 			timeChanger += clickChangeRate;
@@ -142,7 +139,6 @@ public class Clock : MonoBehaviour {
 				currentTime -= (int) timeChanger;
 				timeChanger = 0f;
 			}
-            CheckFailure();
 		}
 		CheckFailure();
 		DisplayTime();
@@ -154,7 +150,6 @@ public class Clock : MonoBehaviour {
 		
 		HealthBar.fillAmount = HealthAmount;
 		CheckFailure ();
-		TextThreshold.text = failureThreshold + " Min";
 		DisplayTime();
 		isMouseOver = true;
 		infoCard.gameObject.SetActive(true);
