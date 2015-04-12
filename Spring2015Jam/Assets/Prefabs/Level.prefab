@@ -1032,7 +1032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &191544
 GameObject:
   m_ObjectHideFlags: 1
@@ -3180,7 +3180,7 @@ MonoBehaviour:
   livesText: {fileID: 11448960}
   pauseMenu: {fileID: 186942}
   gameOverMenu: {fileID: 148586}
-  clockSpawnRate: 20
+  clockSpawnRate: 5
   difficultyIncreaseRate: 30
   maxLives: 3
   maxDifficulty: 8
@@ -3477,8 +3477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor_img: {fileID: 2800000, guid: 1feba451e5938104d948a6a36df8b869, type: 3}
-  cursor_left: {fileID: 2800000, guid: 95878c00886be35478c11e3ea7974f9f, type: 3}
-  cursor_right: {fileID: 2800000, guid: 8a6ea97e5a8a5404b9193af506dc0f23, type: 3}
+  cursor_left: {fileID: 2800000, guid: 25c368ac18f6dcd47af0f8f72a201fba, type: 3}
+  cursor_right: {fileID: 2800000, guid: 3f5448e25ddeb1b4298232185c847b8a, type: 3}
 --- !u!114 &11433798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3793,7 +3793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: XXMin
 --- !u!114 &11455078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3831,7 +3831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: XX:XX
 --- !u!114 &11458870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5639,7 +5639,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 310, y: 160}
+  m_SizeDelta: {x: 180, y: 160}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22449404
 RectTransform:
