@@ -186,7 +186,7 @@ GameObject:
   - 222: {fileID: 22238214}
   - 114: {fileID: 11444860}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: RightTreshold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,6 +558,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &140032
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22425584}
+  - 222: {fileID: 22209920}
+  - 114: {fileID: 11466144}
+  m_Layer: 5
+  m_Name: TresholdBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &140374
 GameObject:
   m_ObjectHideFlags: 1
@@ -827,23 +844,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &165474
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 22433800}
-  - 222: {fileID: 22268322}
-  - 114: {fileID: 11454510}
-  m_Layer: 5
-  m_Name: FailThreshold
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &167340
 GameObject:
   m_ObjectHideFlags: 1
@@ -863,6 +863,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &168428
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22415530}
+  - 222: {fileID: 22207422}
+  - 114: {fileID: 11473832}
+  m_Layer: 5
+  m_Name: LeftTreshold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &169880
 GameObject:
   m_ObjectHideFlags: 1
@@ -877,6 +894,23 @@ GameObject:
   - 114: {fileID: 11459552}
   m_Layer: 0
   m_Name: duck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &172854
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22449392}
+  - 222: {fileID: 22203962}
+  - 114: {fileID: 11450248}
+  m_Layer: 5
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -912,6 +946,23 @@ GameObject:
   - 114: {fileID: 11441252}
   m_Layer: 0
   m_Name: bundle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &181940
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22475034}
+  - 222: {fileID: 22245574}
+  - 114: {fileID: 11432026}
+  m_Layer: 5
+  m_Name: LimitLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,6 +1064,23 @@ GameObject:
   - 212: {fileID: 21276806}
   m_Layer: 9
   m_Name: fuse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &190274
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22474730}
+  - 222: {fileID: 22276524}
+  - 114: {fileID: 11449628}
+  m_Layer: 5
+  m_Name: LimitRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2870,7 +2938,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 2
+  clockTickRate: 2.20000005
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -2883,9 +2951,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11406458
 MonoBehaviour:
@@ -2946,7 +3015,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 2.0999999
+  clockTickRate: 2.5
   infoCard: {fileID: 190282}
   minTimeOffset: 5
   maxTimeOffset: 10
@@ -2959,9 +3028,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11409614
 MonoBehaviour:
@@ -3151,7 +3221,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Universal Clock
+  m_Text: XX:XX
 --- !u!114 &11423804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3236,7 +3306,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .5
+  clockTickRate: .449999988
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -3249,9 +3319,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11427974
 MonoBehaviour:
@@ -3267,7 +3338,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .699999988
+  clockTickRate: .600000024
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -3280,9 +3351,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11429418
 MonoBehaviour:
@@ -3383,7 +3455,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .75
+  clockTickRate: .649999976
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -3396,9 +3468,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11431202
 MonoBehaviour:
@@ -3412,6 +3485,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowActivationOnStandalone: 0
+--- !u!114 &11432026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11432830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3518,9 +3612,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11441252
 MonoBehaviour:
@@ -3586,7 +3681,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.89999998
+  clockTickRate: 1e+07
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -3599,9 +3694,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11444180
 MonoBehaviour:
@@ -3652,13 +3748,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .0977508649, g: .315162271, b: .83088237, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Sprite: {fileID: 21300000, guid: 2763c25966fff1847a6792e02b7af196, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!114 &11445118
@@ -3711,6 +3807,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -15
+--- !u!114 &11449628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &11450248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .0977508649, g: .315162271, b: .83088237, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2763c25966fff1847a6792e02b7af196, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11450804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3725,12 +3863,12 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 2.29999995
+  clockTickRate: 3
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
-  minSuccessTime: 100
-  maxSuccessTime: 160
+  minSuccessTime: 30
+  maxSuccessTime: 45
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -3738,9 +3876,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11451536
 MonoBehaviour:
@@ -3768,32 +3907,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
---- !u!114 &11454510
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 349438c49d1947246b48b0f77056f453, type: 3}
-    m_FontSize: 30
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: XXMin
 --- !u!114 &11455078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3846,7 +3959,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .649999976
+  clockTickRate: .5
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -3859,9 +3972,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11459552
 MonoBehaviour:
@@ -3970,6 +4084,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56522b5bee734d7429c33883fd35da8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11466144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11466388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4016,7 +4151,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.70000005
+  clockTickRate: 3
   infoCard: {fileID: 190282}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -4029,9 +4164,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11469534
 MonoBehaviour:
@@ -4049,6 +4185,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11473832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2763c25966fff1847a6792e02b7af196, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 1
 --- !u!114 &11478630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4095,7 +4252,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.79999995
+  clockTickRate: 2
   infoCard: {fileID: 190282}
   minTimeOffset: 12
   maxTimeOffset: 15
@@ -4108,9 +4265,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11484020
 MonoBehaviour:
@@ -4229,16 +4387,17 @@ MonoBehaviour:
   maxTimeOffset: 2
   minSuccessTime: 200
   maxSuccessTime: 300
-  minThreshold: 10
-  maxThreshold: 12
+  minThreshold: 15
+  maxThreshold: 17
   hour: 0
   min: 0
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11444860}
+  HealthBar: {fileID: 11450248}
+  RightTreshold: {fileID: 11444860}
+  LeftTreshold: {fileID: 11473832}
   TextClock: {fileID: 11458418}
-  TextThreshold: {fileID: 11454510}
   clickChangeRate: 1
 --- !u!114 &11494302
 MonoBehaviour:
@@ -5256,6 +5415,24 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1490176716fec6a42bfe80e6b7c749ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!222 &22203962
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172854}
+--- !u!222 &22207422
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168428}
+--- !u!222 &22209920
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140032}
 --- !u!222 &22219912
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -5292,6 +5469,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120108}
+--- !u!222 &22245574
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181940}
 --- !u!222 &22248596
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -5340,18 +5523,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186942}
---- !u!222 &22268322
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165474}
 --- !u!222 &22269590
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140374}
+--- !u!222 &22276524
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190274}
 --- !u!222 &22284634
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -5424,6 +5607,24 @@ RectTransform:
   m_AnchoredPosition: {x: 45, y: -8}
   m_SizeDelta: {x: 152, y: 24}
   m_Pivot: {x: .5, y: .5}
+--- !u!224 &22415530
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22475034}
+  m_Father: {fileID: 22425584}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -33.4999924, y: -11.8999939}
+  m_SizeDelta: {x: 70, y: 24}
+  m_Pivot: {x: .5, y: .5}
 --- !u!224 &22415600
 RectTransform:
   m_ObjectHideFlags: 1
@@ -5457,6 +5658,25 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22425584
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22449404}
+  - {fileID: 22415530}
+  m_Father: {fileID: 22466376}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -6.49997854, y: -37.3999939}
+  m_SizeDelta: {x: 5, y: 24}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22426262
 RectTransform:
@@ -5549,23 +5769,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 90.9999695}
   m_SizeDelta: {x: 234, y: 48}
   m_Pivot: {x: .5, y: .5}
---- !u!224 &22433800
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22466376}
-  m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -35}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: .5, y: .5}
 --- !u!224 &22434846
 RectTransform:
   m_ObjectHideFlags: 1
@@ -5580,7 +5783,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
+  m_AnchoredPosition: {x: 40, y: -10}
   m_SizeDelta: {x: 170, y: 41}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22434950
@@ -5641,12 +5844,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 160}
   m_Pivot: {x: 0, y: 1}
---- !u!224 &22449404
+--- !u!224 &22449392
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113738}
+  m_GameObject: {fileID: 172854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -5657,6 +5860,24 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 45, y: -8}
   m_SizeDelta: {x: 152, y: 24}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22449404
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22474730}
+  m_Father: {fileID: 22425584}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 39, y: -11.8999939}
+  m_SizeDelta: {x: 70, y: 24}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22458054
 RectTransform:
@@ -5703,9 +5924,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22408622}
-  - {fileID: 22449404}
+  - {fileID: 22449392}
   - {fileID: 22462974}
-  - {fileID: 22433800}
+  - {fileID: 22425584}
   m_Father: {fileID: 22448006}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
@@ -5713,6 +5934,40 @@ RectTransform:
   m_AnchoredPosition: {x: 45, y: -55}
   m_SizeDelta: {x: 100, y: 99.9999924}
   m_Pivot: {x: 0, y: 1}
+--- !u!224 &22474730
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22449404}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 38.4000015, y: -.100007184}
+  m_SizeDelta: {x: 5, y: 24}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22475034
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22415530}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -38.4000359, y: -.100007184}
+  m_SizeDelta: {x: 5, y: 24}
+  m_Pivot: {x: .5, y: .5}
 --- !u!224 &22479390
 RectTransform:
   m_ObjectHideFlags: 1

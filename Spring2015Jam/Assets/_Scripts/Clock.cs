@@ -70,7 +70,11 @@ public class Clock : MonoBehaviour {
 
 	void UpdateClockTime()
 	{
-		currentTime += 1;
+		if (positiveRange) {
+			currentTime += 1;
+		} else {
+			currentTime -= 1;
+		}
 		CheckFailure ();
 	}
 	
