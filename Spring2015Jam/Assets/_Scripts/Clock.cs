@@ -70,7 +70,14 @@ public class Clock : MonoBehaviour {
 	}
 	
 	void CheckFailure(){
-		if (Mathf.Abs(GameManager.getUniversalTime() - currentTime) >= failureThreshold)
+        int absDifference = Mathf.Abs(GameManager.getUniversalTime() - currentTime);
+        float redIntensity = (float)absDifference / failureThreshold;
+        if (redIntensity >= 0.7f) //possibly change?
+            this.GetComponent<RedOnWarning>().SetRed(redIntensity);
+        else
+            this.GetComponent<RedOnWarning>().ResetColor();
+
+		if (absDifference >= failureThreshold)
 		{
 			GameManager.LoseLife();
 			DisableClock();
@@ -99,6 +106,7 @@ public class Clock : MonoBehaviour {
 				currentTime += (int) timeChanger;
 				timeChanger = 0f;
 			}
+            CheckFailure();
 			DisplayTime();
 		}
 		else if (Input.GetMouseButton(1)) { //right button, slowdown
@@ -108,6 +116,7 @@ public class Clock : MonoBehaviour {
 				currentTime -= (int) timeChanger;
 				timeChanger = 0f;
 			}
+            CheckFailure();
 			DisplayTime();
 		}
 	}
@@ -136,6 +145,8 @@ public class Clock : MonoBehaviour {
 		CancelInvoke("UpdateClockTime");
 		gameObject.SetActive(false);
 		infoCard.gameObject.SetActive(false);
+
+        this.GetComponent<RedOnWarning>().ResetColor();
 	}
 	
 	public void StartClock()
