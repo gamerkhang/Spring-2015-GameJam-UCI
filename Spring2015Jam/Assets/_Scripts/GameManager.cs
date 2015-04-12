@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 	int gameHour = 0, gameMinute = 0;
 	public static int lives = 5;
 	public static int CurrentUniversalTime = 720;
-	public int currentAmountClocks, maxClocks = 1;
+	public static int currentAmountClocks, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
 	public static float universalTickRate;
 	public float clockSpawnRate = 30.0f;
@@ -61,9 +61,7 @@ public class GameManager : MonoBehaviour {
 			gameHour -=(12*(gameHour/12));
 		}
 		gameMinute = minutes % 60;
-		string minute="";
-		if(gameMinute<10)
-			minute = "0";
+
 		t.text = string.Format ("{0:D2}:{1:D2}", gameHour, gameMinute);
 	}
 
