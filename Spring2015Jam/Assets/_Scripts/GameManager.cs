@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		CurrentUniversalTime = 720;
+		maxClocks = 1;
+		lives = 5;
 		foreach (GameObject clock in spawnableClocks)
 			clock.SetActive(false);
 		InvokeRepeating("UpdateUniversalClock", 0f, universalTickRate);
@@ -43,7 +46,7 @@ public class GameManager : MonoBehaviour {
 			return;
 		livesText.text = lives.ToString();
 		if (lives <= 0) {
-			GameOver();
+			Invoke("GameOver", 1f);
 		}
 		
 		
@@ -114,7 +117,11 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	public void GameOver () {
+		CancelInvoke("UpdateUniversalClock");
+		CancelInvoke("AddClock");
+		CancelInvoke("IncreaseMaxClocks");
 		Time.timeScale = 0;
+		ScreenShake.shake = 0f;
 		gameOverMenu.SetActive(true);
 	}
 	
@@ -129,7 +136,8 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	public void TryAgain () {
-		Application.LoadLevel ("Gameplay");
+		Time.timeScale = 1;
+		Application.LoadLevel (Application.loadedLevelName);
 	}
 	
 	public void Quit () {
