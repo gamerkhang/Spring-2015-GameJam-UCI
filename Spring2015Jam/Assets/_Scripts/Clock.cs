@@ -144,6 +144,10 @@ public class Clock : MonoBehaviour {
 				timeChanger = 0f;
 			}
 		}
+		if (infoCard.gameObject.activeInHierarchy == true) {
+			infoCard.gameObject.SetActive(true);
+		}
+		
 		CheckFailure();
 		DisplayTime();
 	}
