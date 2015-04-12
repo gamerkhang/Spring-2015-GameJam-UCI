@@ -57,7 +57,12 @@ public class Clock : MonoBehaviour {
 		TextClock.text = string.Format ("{0:D2}:{1:D2}", hour, min);
 	}
 	
-	
+	void Update(){
+		if (Input.GetMouseButtonUp (0) || Input.GetMouseButtonUp (1)) {
+			CursorChange.ChangeBack();
+		}
+	}
+
 	void UpdateClockTime(){
 		currentTime += 1;
 		CheckFailure ();
@@ -89,6 +94,7 @@ public class Clock : MonoBehaviour {
 		HealthBar.fillAmount = HealthAmount;
 		if (Input.GetMouseButton(0)) { //left button, speedup
 			timeChanger += clickChangeRate;
+			CursorChange.LeftClick();
 			if( timeChanger > 1){
 				currentTime += (int) timeChanger;
 				timeChanger = 0f;
@@ -97,6 +103,7 @@ public class Clock : MonoBehaviour {
 		}
 		else if (Input.GetMouseButton(1)) { //right button, slowdown
 			timeChanger += clickChangeRate;
+			CursorChange.RightClick();
 			if( timeChanger > 1){
 				currentTime -= (int) timeChanger;
 				timeChanger = 0f;
@@ -119,6 +126,7 @@ public class Clock : MonoBehaviour {
 		if (Time.timeScale == 0)
 			return;
 		infoCard.gameObject.SetActive(false);
+		CursorChange.ChangeBack();
 	}
 	
 	void DisableClock()
