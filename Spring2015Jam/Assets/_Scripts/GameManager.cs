@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	int gameHour = 0, gameMinute = 0;
 	public static int lives = 5;
 	public static int CurrentUniversalTime = 720;
-	public static int currentAmountClocks, maxClocks = 1;
+	public static int currentAmountClocks, minClocks = 1, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
 	public static float universalTickRate = 1f;
 	public float clockSpawnRate = 30.0f;
@@ -106,7 +106,11 @@ public class GameManager : MonoBehaviour {
 	
 	void IncreaseMaxClocks() {
 		if (maxClocks < maxDifficulty)
+		{
+			if (minClocks == 1 && maxClocks != 1)
+				minClocks *= 2;
 			maxClocks *= 2;
+		}
 		//if (lives < maxLives)
 		//	lives++;
 	}
