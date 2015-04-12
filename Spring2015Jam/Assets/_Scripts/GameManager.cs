@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 	int gameHour = 0, gameMinute = 0;
 	public static int lives = 5;
 	public static int CurrentUniversalTime = 720;
-	public int currentAmountClocks, maxClocks = 1;
+	public static int currentAmountClocks, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
 	public static float universalTickRate;
 	public float clockSpawnRate = 30.0f;
