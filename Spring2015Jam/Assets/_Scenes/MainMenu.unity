@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82b692054a20b3948b6841de304e83ec, type: 3}
+    m_Font: {fileID: 12800000, guid: 349438c49d1947246b48b0f77056f453, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
