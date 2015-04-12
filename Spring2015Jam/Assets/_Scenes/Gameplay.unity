@@ -2570,6 +2570,18 @@ Prefab:
       propertyPath: TextClock
       value: 
       objectReference: {fileID: 1431916832}
+    - target: {fileID: 11470678, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
+      propertyPath: clockTickRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470678, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
+      propertyPath: minThreshold
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470678, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
+      propertyPath: maxThreshold
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
   m_IsPrefabParent: 0
