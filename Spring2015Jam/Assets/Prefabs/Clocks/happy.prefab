@@ -164,7 +164,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: 1.79999995
+  clockTickRate: .550000012
   infoCard: {fileID: 0}
   minTimeOffset: 12
   maxTimeOffset: 15
@@ -176,10 +176,11 @@ MonoBehaviour:
   min: 0
   currentTime: 0
   ClockAlive: 1
-  positiveRange: 1
+  positiveRange: 0
   HealthBar: {fileID: 0}
+  RightTreshold: {fileID: 0}
+  LeftTreshold: {fileID: 0}
   TextClock: {fileID: 0}
-  TextThreshold: {fileID: 0}
   clickChangeRate: 1
 --- !u!114 &11480618
 MonoBehaviour:

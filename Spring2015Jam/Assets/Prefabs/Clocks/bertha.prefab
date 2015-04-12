@@ -306,7 +306,7 @@ MonoBehaviour:
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
-  clockTickRate: .75
+  clockTickRate: .649999976
   infoCard: {fileID: 0}
   minTimeOffset: 1
   maxTimeOffset: 2
@@ -320,8 +320,9 @@ MonoBehaviour:
   ClockAlive: 1
   positiveRange: 1
   HealthBar: {fileID: 0}
+  RightTreshold: {fileID: 0}
+  LeftTreshold: {fileID: 0}
   TextClock: {fileID: 0}
-  TextThreshold: {fileID: 0}
   clickChangeRate: 1
 --- !u!212 &21205132
 SpriteRenderer:

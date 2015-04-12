@@ -261,8 +261,9 @@ MonoBehaviour:
   ClockAlive: 1
   positiveRange: 1
   HealthBar: {fileID: 0}
+  RightTreshold: {fileID: 0}
+  LeftTreshold: {fileID: 0}
   TextClock: {fileID: 0}
-  TextThreshold: {fileID: 0}
   clickChangeRate: 1
 --- !u!212 &21200004
 SpriteRenderer:
