@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	public static float universalTickRate = 1f;
 	public float clockSpawnRate = 30.0f;
 	public float difficultyIncreaseRate = 60.0f;
+	public int maxLives = 3;
 	public int maxDifficulty = 8;
 	
 	// Use this for initialization
@@ -23,8 +24,15 @@ public class GameManager : MonoBehaviour {
 		CurrentUniversalTime = 720;
 		maxClocks = 1;
 		lives = 5;
-		foreach (GameObject clock in spawnableClocks)
-			clock.SetActive(false);
+		foreach (GameObject clock in spawnableClocks) {
+			if (clock.name == "ship")
+			{
+				clock.GetComponent<Clock>().StartClock();
+				currentAmountClocks++;
+			}
+			else
+				clock.SetActive (false);
+		}
 		InvokeRepeating("UpdateUniversalClock", 0f, universalTickRate);
 		InvokeRepeating("AddClock", 0f, clockSpawnRate);
 		InvokeRepeating("IncreaseMaxClocks", 0f, difficultyIncreaseRate);
@@ -99,8 +107,8 @@ public class GameManager : MonoBehaviour {
 	void IncreaseMaxClocks() {
 		if (maxClocks < maxDifficulty)
 			maxClocks *= 2;
-		else
-			CancelInvoke("IncreaseMaxClocks");
+		//if (lives < maxLives)
+		//	lives++;
 	}
 	
 	public void AddLife () {

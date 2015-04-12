@@ -44,6 +44,7 @@ GameObject:
   - 212: {fileID: 21238148}
   - 60: {fileID: 6067724}
   - 114: {fileID: 11471620}
+  - 114: {fileID: 11423920}
   m_Layer: 0
   m_Name: bundle
   m_TagString: Untagged
@@ -190,6 +191,17 @@ PolygonCollider2D:
       - {x: -.754999995, y: 1.83500004}
       - {x: -.745000005, y: 1.81500006}
       - {x: -.735000014, y: 1.82500005}
+--- !u!114 &11423920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56522b5bee734d7429c33883fd35da8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11429084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be90bb8818474684ca26149afc9e0558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: -15
 --- !u!114 &11471620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,24 +227,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
-  infoCard: {fileID: 163086, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  minTimeOffset: 80
-  maxTimeOffset: 40
+  successTickRate: 1
+  clockTickRate: .649999976
+  infoCard: {fileID: 0}
+  minTimeOffset: 1
+  maxTimeOffset: 2
   minSuccessTime: 60
-  maxSuccessTime: 90
+  maxSuccessTime: 65
   minThreshold: 30
-  maxThreshold: 60
+  maxThreshold: 45
   hour: 0
   min: 0
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11434526, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  TextClock: {fileID: 11485374, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  TextThreshold: {fileID: 11464094, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  clickChangeRate: 0
+  HealthBar: {fileID: 0}
+  TextClock: {fileID: 0}
+  TextThreshold: {fileID: 0}
+  clickChangeRate: 1
 --- !u!212 &21229128
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -44,6 +44,7 @@ GameObject:
   - 212: {fileID: 21234822}
   - 60: {fileID: 6075964}
   - 114: {fileID: 11477418}
+  - 114: {fileID: 11414434}
   m_Layer: 8
   m_Name: bomb
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0299999993, y: -2.20000005, z: 10}
+  m_LocalPosition: {x: -.50999999, y: -2.17000008, z: 10}
   m_LocalScale: {x: .460826933, y: .460827112, z: .460827112}
   m_Children:
   - {fileID: 498440}
@@ -84,8 +85,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164586}
   m_LocalRotation: {x: -.0135948444, y: .014234555, z: -.18421717, w: .982688487}
-  m_LocalPosition: {x: 1.90729368, y: 1.63438952, z: -.060645245}
-  m_LocalScale: {x: .777776957, y: .777777016, z: .777777016}
+  m_LocalPosition: {x: 1.88, y: 1.49000001, z: -.0599999987}
+  m_LocalScale: {x: .920186818, y: .920186937, z: .920186937}
   m_Children: []
   m_Father: {fileID: 472394}
   m_RootOrder: 0
@@ -210,6 +211,17 @@ PolygonCollider2D:
       - {x: -.294999987, y: 1.755}
       - {x: -.324999988, y: 1.76499999}
       - {x: -.344999999, y: 1.745}
+--- !u!114 &11414434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56522b5bee734d7429c33883fd35da8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11425690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be90bb8818474684ca26149afc9e0558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -10
+  speed: -15
 --- !u!114 &11477418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,14 +247,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
+  successTickRate: 1
+  clockTickRate: .5
   infoCard: {fileID: 0}
-  minTimeOffset: 10
-  maxTimeOffset: 20
+  minTimeOffset: 1
+  maxTimeOffset: 2
   minSuccessTime: 60
   maxSuccessTime: 90
-  minThreshold: 30
+  minThreshold: 45
   maxThreshold: 60
   hour: 0
   min: 0
@@ -252,7 +264,7 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   TextClock: {fileID: 0}
   TextThreshold: {fileID: 0}
-  clickChangeRate: .5
+  clickChangeRate: 1
 --- !u!212 &21204746
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -276,7 +288,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 1feba451e5938104d948a6a36df8b869, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21234822
@@ -302,7 +314,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e68fbe33bf516dc4abab536d1e6446f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21254416
@@ -328,7 +340,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1490176716fec6a42bfe80e6b7c749ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21212816}
   - 60: {fileID: 6017800}
   - 114: {fileID: 11437236}
+  - 114: {fileID: 11423972}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -112,6 +113,17 @@ PolygonCollider2D:
       - {x: 1.90999997, y: -2.11999989}
       - {x: 1.59000003, y: -1.98000002}
       - {x: 2.20000005, y: 2.11999989}
+--- !u!114 &11423972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56522b5bee734d7429c33883fd35da8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11428376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be90bb8818474684ca26149afc9e0558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: -15
 --- !u!114 &11437236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,13 +149,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToSuccess: 0
   failureThreshold: 0
-  successTickRate: .200000003
-  clockTickRate: .200000003
-  infoCard: {fileID: 163086, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  minTimeOffset: 80
-  maxTimeOffset: 40
-  minSuccessTime: 60
-  maxSuccessTime: 90
+  successTickRate: 1
+  clockTickRate: 2
+  infoCard: {fileID: 0}
+  minTimeOffset: 1
+  maxTimeOffset: 2
+  minSuccessTime: 90
+  maxSuccessTime: 125
   minThreshold: 30
   maxThreshold: 60
   hour: 0
@@ -151,10 +163,10 @@ MonoBehaviour:
   currentTime: 0
   ClockAlive: 1
   positiveRange: 1
-  HealthBar: {fileID: 11434526, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  TextClock: {fileID: 11485374, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  TextThreshold: {fileID: 11464094, guid: a085f0702042f4e4486c8bd99b949a11, type: 2}
-  clickChangeRate: 0
+  HealthBar: {fileID: 0}
+  TextClock: {fileID: 0}
+  TextThreshold: {fileID: 0}
+  clickChangeRate: 1
 --- !u!212 &21212816
 SpriteRenderer:
   m_ObjectHideFlags: 1
