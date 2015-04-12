@@ -66,7 +66,6 @@ public class Clock : MonoBehaviour {
 	void UpdateClockTime(){
 		currentTime += 1;
 		CheckFailure ();
-		DisplayTime ();
 	}
 	
 	void CheckFailure(){
@@ -107,7 +106,6 @@ public class Clock : MonoBehaviour {
 				timeChanger = 0f;
 			}
             CheckFailure();
-			DisplayTime();
 		}
 		else if (Input.GetMouseButton(1)) { //right button, slowdown
 			timeChanger += clickChangeRate;
@@ -117,8 +115,8 @@ public class Clock : MonoBehaviour {
 				timeChanger = 0f;
 			}
             CheckFailure();
-			DisplayTime();
 		}
+		DisplayTime();
 	}
 	
 	void OnMouseEnter(){
@@ -127,7 +125,7 @@ public class Clock : MonoBehaviour {
 		
 		HealthBar.fillAmount = HealthAmount;
 		TextThreshold.text = failureThreshold + " Min";
-
+		DisplayTime();
 		infoCard.gameObject.SetActive(true);
 	}
 	
