@@ -3117,11 +3117,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1595521104}
---- !u!1 &1610865330 stripped
+--- !u!1 &1610865330
 GameObject:
   m_PrefabParentObject: {fileID: 163514, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
   m_PrefabInternal: {fileID: 1190091151}
---- !u!4 &1610865331 stripped
+--- !u!4 &1610865331
 Transform:
   m_PrefabParentObject: {fileID: 415552, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
   m_PrefabInternal: {fileID: 1190091151}
@@ -3482,7 +3482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1693200752
 RectTransform:
   m_ObjectHideFlags: 0
