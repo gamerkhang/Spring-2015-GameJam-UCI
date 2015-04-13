@@ -148,6 +148,13 @@ public class GameManager : MonoBehaviour {
 			streakWindow.SetActive(true);
 			Invoke ("HideStreak", 2.0f);
 		}
+		if (streakAmount % 8 == 0)
+		{
+			for (int i = 0; i < (streakAmount / 8); i++)
+			{
+				AddLife();
+			}
+		}
 	}
 
 	public void HideStreak(){
