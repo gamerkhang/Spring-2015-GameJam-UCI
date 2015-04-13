@@ -34,9 +34,10 @@ public class Clock : MonoBehaviour {
 
 	float HealthAmount = 1f;
 
+    bool isMouseOver = false;
 
-	bool isMouseOver = false;
-	
+    public GameObject ExplosionHandler;
+
 	void Start () 
 	{
 		successTickRate = GameManager.universalTickRate;
@@ -108,7 +109,9 @@ public class Clock : MonoBehaviour {
             this.GetComponent<RedOnWarning>().ResetColor();
 
 		if (absDifference >= failureThreshold)
-		{
+        {
+            ExplosionHandler.GetComponent<ExplosionHandlerScript>().playExplosionSound();
+
 			GameManager.LoseLife();
 			DisableClock();
 		}
@@ -128,6 +131,8 @@ public class Clock : MonoBehaviour {
 			return;
 
 		HealthBar.fillAmount = HealthAmount;
+
+        currentTime += (int)(20 * Input.GetAxis("Mouse ScrollWheel"));
 		if (Input.GetMouseButton(0)) { //left button, speedup
 			timeChanger += clickChangeRate;
 			CursorChange.LeftClick();
