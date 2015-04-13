@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 			if (clock.name == "ship")
 			{
 				clock.GetComponent<Clock>().StartClock();
-				currentAmountClocks++;
+				//currentAmountClocks++;
 			}
 			else
 				clock.SetActive (false);
@@ -186,6 +186,7 @@ public class GameManager : MonoBehaviour {
 	
 	public void Unpause () {
 		pauseMenu.SetActive(false);
+		victoryMenu.SetActive(false);
 		Time.timeScale = 1;
 	}
 	
