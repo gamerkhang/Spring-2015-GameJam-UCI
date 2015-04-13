@@ -9,15 +9,23 @@ public class GameManager : MonoBehaviour {
 	public Text clockText;
 	public Text livesText;
 	int gameHour = 0, gameMinute = 0;
-	public static int lives = 5;
-	public static int CurrentUniversalTime = 720;
-	public static int currentAmountClocks, minClocks = 1, maxClocks = 1;
+	public int lives = 5;
+	public int OriginalUniversalTime = 720;
+	public int CurrentUniversalTime = 720;
+	public int VictoryTime = 1440;
+	public int timeSurvived;
+	public int currentAmountClocks, minClocks = 1, maxClocks = 1;
 	public GameObject pauseMenu, gameOverMenu;
 	public static float universalTickRate = 1f;
 	public float clockSpawnRate = 30.0f;
 	public float difficultyIncreaseRate = 60.0f;
 	public int maxLives = 3;
 	public int maxDifficulty = 8;
+	public int streakAmount;
+	public int highestStreak;
+	public GameObject streakWindow;
+	public Text streakText;
+	public Text gameOverText;
 	
 	// Use this for initialization
 	void Start () {
@@ -52,7 +60,7 @@ public class GameManager : MonoBehaviour {
 		
 		if (Time.timeScale == 0)
 			return;
-		livesText.text = lives.ToString();
+		livesText.text = "x " + lives.ToString();
 		if (lives <= 0) {
 			Invoke("GameOver", 1f);
 		}
@@ -67,9 +75,14 @@ public class GameManager : MonoBehaviour {
 	
 	void UpdateUniversalClock () {
 		CurrentUniversalTime += 1;
+		if (CurrentUniversalTime == VictoryTime)
+			Victory();
 		ParseTime (clockText, CurrentUniversalTime);
 	}
-	
+
+	void Victory() {
+
+	}
 	
 	void ParseTime(Text t, int minutes){
 		gameHour = minutes / 60;
@@ -103,32 +116,56 @@ public class GameManager : MonoBehaviour {
 		//Instantiate(spawnableClocks[Random.Range (0, spawnableClocks.Length)]);  position?
 		//set the chosen one active
 	}
+
+	public void RemoveClock() {
+		currentAmountClocks--;
+		if (currentAmountClocks < minClocks)
+			AddClock();
+	}
 	
 	void IncreaseMaxClocks() {
 		if (maxClocks < maxDifficulty)
 		{
-			if (minClocks == 1 && maxClocks != 1)
+			if (!(minClocks == 1 && maxClocks == 1))
 				minClocks *= 2;
 			maxClocks *= 2;
 		}
 		//if (lives < maxLives)
 		//	lives++;
 	}
-	
+
+	public void AddtoStreak() {
+		streakAmount++;
+		if (streakAmount > highestStreak)
+			highestStreak = streakAmount;
+		if (streakAmount > 1)
+		{
+			streakText.text = streakAmount + " Streak!";
+			streakWindow.SetActive(true);
+			Invoke ("HideStreak", 2.0f);
+		}
+	}
+
+	public void HideStreak(){
+		streakWindow.SetActive(false);
+	}
+
 	public void AddLife () {
 		lives++;
 	}
 	
-	public static void LoseLife () {
+	public void LoseLife () {
 		lives--;
 		ScreenShake.shake = 1f;
 	}
 	
-	public static int getUniversalTime (){
-		return CurrentUniversalTime;
-	}
-	
 	public void GameOver () {
+		int survived = CurrentUniversalTime - OriginalUniversalTime;
+		gameOverText.text = string.Format ("You survived for \n{0:D2} minutes and\n {1:D2} seconds...\nHighest streak: {2}",
+		                                   survived / 60, survived % 60, highestStreak);
+
+		minClocks = 1;
+		maxClocks = 1;
 		CancelInvoke("UpdateUniversalClock");
 		CancelInvoke("AddClock");
 		CancelInvoke("IncreaseMaxClocks");
@@ -136,7 +173,7 @@ public class GameManager : MonoBehaviour {
 		ScreenShake.shake = 0f;
 		gameOverMenu.SetActive(true);
 	}
-	
+
 	public void Pause () {
 		Time.timeScale = 0;
 		pauseMenu.SetActive(true);
@@ -153,6 +190,6 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	public void Quit () {
-		Application.Quit ();
+		Application.LoadLevel ("MainMenu");
 	}
 }
