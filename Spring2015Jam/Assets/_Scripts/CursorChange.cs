@@ -8,7 +8,7 @@ public class CursorChange : MonoBehaviour {
 	Texture2D current_img;
 	public static bool CursorChanging = false;
 	public static int CursorType = 0;
-	CursorMode cursorMode = CursorMode.Auto;
+	CursorMode cursorMode = CursorMode.ForceSoftware;
 	Vector2 hotSpot = Vector2.zero;
 	
 	

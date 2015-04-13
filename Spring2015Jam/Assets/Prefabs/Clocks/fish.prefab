@@ -45,6 +45,7 @@ GameObject:
   - 60: {fileID: 6003710}
   - 114: {fileID: 11461832}
   - 114: {fileID: 11486584}
+  - 82: {fileID: 8285756}
   m_Layer: 0
   m_Name: fish
   m_TagString: Untagged
@@ -310,6 +311,76 @@ PolygonCollider2D:
       - {x: 5.03999996, y: -3.0150001}
       - {x: 5.01999998, y: -2.89499998}
       - {x: 4.98000002, y: -2.7750001}
+--- !u!82 &8285756
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181768}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24348438, guid: 06d6fdc4b6cab4e4ab336212ada403c6,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9bbed0db856a4d544bd3f7b99cb9f3bf, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11402320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3dfa0ec08bbef4bb95a5b615d6a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   timeToSuccess: 0
   failureThreshold: 0
   successTickRate: 1
@@ -350,10 +422,11 @@ MonoBehaviour:
   ClockAlive: 1
   positiveRange: 0
   HealthBar: {fileID: 0}
-  RightTreshold: {fileID: 0}
-  LeftTreshold: {fileID: 0}
+  RightThreshold: {fileID: 0}
+  LeftThreshold: {fileID: 0}
   TextClock: {fileID: 0}
   clickChangeRate: 1
+  ExplosionHandler: {fileID: 0}
 --- !u!114 &11486584
 MonoBehaviour:
   m_ObjectHideFlags: 1

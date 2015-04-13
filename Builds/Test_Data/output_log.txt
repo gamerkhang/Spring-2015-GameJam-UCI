@@ -12,10 +12,114 @@ Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam S
 Loading C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.054 seconds
+- Completed reload, in  0.110 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\Test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\Test_Data\Managed\System.dll (this message is harmless)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.975379 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 375.
+Total: 0.257024 ms (FindLiveObjects: 0.033020 ms CreateObjectMapping: 0.016510 ms MarkObjects: 0.194552 ms  DeleteObjects: 0.012048 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.099045 ms
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 222.
+Total: 0.381073 ms (FindLiveObjects: 0.045068 ms CreateObjectMapping: 0.025434 ms MarkObjects: 0.265056 ms  DeleteObjects: 0.042391 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.801415 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 375.
+Total: 0.562240 ms (FindLiveObjects: 0.060240 ms CreateObjectMapping: 0.033466 ms MarkObjects: 0.443545 ms  DeleteObjects: 0.024096 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.079411 ms
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 222.
+Total: 0.386874 ms (FindLiveObjects: 0.034805 ms CreateObjectMapping: 0.016064 ms MarkObjects: 0.292275 ms  DeleteObjects: 0.041944 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.999984 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 391.
+Total: 0.456485 ms (FindLiveObjects: 0.070056 ms CreateObjectMapping: 0.021418 ms MarkObjects: 0.346268 ms  DeleteObjects: 0.017402 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.CheckFailure () [0x00000] in <filename unknown>:0 
+  at Clock.UpdateClockTime () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.CheckFailure () [0x00000] in <filename unknown>:0 
+  at Clock.UpdateClockTime () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.CheckFailure () [0x00000] in <filename unknown>:0 
+  at Clock.UpdateClockTime () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.116002 ms
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 222.
+Total: 0.628727 ms (FindLiveObjects: 0.051761 ms CreateObjectMapping: 0.022757 ms MarkObjects: 0.414094 ms  DeleteObjects: 0.139221 ms)
+

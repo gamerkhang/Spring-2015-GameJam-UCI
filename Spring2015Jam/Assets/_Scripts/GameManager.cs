@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 	public int VictoryTime = 1440;
 	public int timeSurvived;
 	public int currentAmountClocks, minClocks = 1, maxClocks = 1;
-	public GameObject pauseMenu, gameOverMenu;
+	public GameObject pauseMenu, gameOverMenu, victoryMenu;
 	public static float universalTickRate = 1f;
 	public float clockSpawnRate = 30.0f;
 	public float difficultyIncreaseRate = 60.0f;
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject streakWindow;
 	public Text streakText;
 	public Text gameOverText;
+	public Text victoryStreakText;
 	
 	// Use this for initialization
 	void Start () {
@@ -81,7 +82,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Victory() {
-
+		victoryStreakText.text = string.Format ("Highest streak: {0}", highestStreak);
+		Time.timeScale = 0;
+		victoryMenu.SetActive(true);
+		maxDifficulty = 12;
 	}
 	
 	void ParseTime(Text t, int minutes){
@@ -191,6 +195,7 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	public void Quit () {
+		Time.timeScale = 1;
 		Application.LoadLevel ("MainMenu");
 	}
 }

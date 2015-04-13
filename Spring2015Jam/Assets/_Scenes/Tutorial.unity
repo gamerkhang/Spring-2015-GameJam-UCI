@@ -2167,6 +2167,7 @@ MonoBehaviour:
   maxClocks: 1
   pauseMenu: {fileID: 249904439}
   gameOverMenu: {fileID: 503773381}
+  victoryMenu: {fileID: 0}
   clockSpawnRate: 5
   difficultyIncreaseRate: 30
   maxLives: 3
@@ -2176,6 +2177,7 @@ MonoBehaviour:
   streakWindow: {fileID: 1595521104}
   streakText: {fileID: 2108481923}
   gameOverText: {fileID: 1995486120}
+  victoryStreakText: {fileID: 0}
 --- !u!114 &981453392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1adf40e7acb877438f630ff2731eb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor_img: {fileID: 2800000, guid: 1feba451e5938104d948a6a36df8b869, type: 3}
+  cursor_img: {fileID: 2800000, guid: 3ea153651e18bcb448e6b2f1c25a1a17, type: 3}
   cursor_left: {fileID: 2800000, guid: 25c368ac18f6dcd47af0f8f72a201fba, type: 3}
   cursor_right: {fileID: 2800000, guid: 3f5448e25ddeb1b4298232185c847b8a, type: 3}
 --- !u!114 &981453393
@@ -3242,11 +3244,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1595521104}
---- !u!1 &1610865330
+--- !u!1 &1610865330 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 163514, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
   m_PrefabInternal: {fileID: 1190091151}
---- !u!4 &1610865331
+--- !u!4 &1610865331 stripped
 Transform:
   m_PrefabParentObject: {fileID: 415552, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
   m_PrefabInternal: {fileID: 1190091151}
