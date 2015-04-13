@@ -126,7 +126,10 @@ public class Clock : MonoBehaviour {
 		timeToSuccess--;
 
 		if (timeToSuccess <= 0)
+		{
+			manager.AddtoStreak();
 			DisableClock();
+		}
 	}
 	
 	void OnMouseOver(){
@@ -182,10 +185,10 @@ public class Clock : MonoBehaviour {
 		manager.RemoveClock();
 		CancelInvoke("UpdateTimeToSuccess");
 		CancelInvoke("UpdateClockTime");
-		gameObject.SetActive(false);
 		infoCard.gameObject.SetActive(false);
 		CursorChange.ChangeBack();
-        this.GetComponent<RedOnWarning>().ResetColor();
+		this.GetComponent<RedOnWarning>().ResetColor();
+		gameObject.SetActive(false);
 	}
 	
 	public void StartClock()
