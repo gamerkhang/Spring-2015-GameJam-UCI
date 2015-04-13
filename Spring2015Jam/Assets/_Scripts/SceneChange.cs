@@ -7,4 +7,9 @@ public class SceneChange : MonoBehaviour {
     {
         Application.LoadLevel(sceneToChangeTo);
     }
+
+	public void Quit()
+	{
+		Application.Quit();
+	}
 }
