@@ -282,9 +282,17 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11461568, guid: bfe5e4190651f0944ad2d1cebcf00225, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe5e4190651f0944ad2d1cebcf00225, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &69210960 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 182760, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+  m_PrefabInternal: {fileID: 1200949411}
 --- !u!1 &73098875
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +832,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11401322, guid: 1e277348feb3357498e4359922326cd0, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e277348feb3357498e4359922326cd0, type: 2}
   m_IsPrefabParent: 0
@@ -1022,6 +1034,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11442438, guid: ff9a1c0be9bf3344a8a0ee6af1af1789, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff9a1c0be9bf3344a8a0ee6af1af1789, type: 2}
   m_IsPrefabParent: 0
@@ -1158,6 +1174,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11461832, guid: d272fb733aa35a34bb095f376d4ec6d8, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d272fb733aa35a34bb095f376d4ec6d8, type: 2}
   m_IsPrefabParent: 0
@@ -1228,6 +1248,14 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11453262, guid: b48b4210db13dd54faf27b6294c8bd8b, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
+    - target: {fileID: 11453262, guid: b48b4210db13dd54faf27b6294c8bd8b, type: 2}
+      propertyPath: minThreshold
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b48b4210db13dd54faf27b6294c8bd8b, type: 2}
   m_IsPrefabParent: 0
@@ -1989,7 +2017,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 78a2f2a864ed4af48ad55fff48065e46, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2114,8 +2142,58 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11443940, guid: 7ada037129df2e94abd092c6ca27ea72, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
+    - target: {fileID: 11443940, guid: 7ada037129df2e94abd092c6ca27ea72, type: 2}
+      propertyPath: clockTickRate
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ada037129df2e94abd092c6ca27ea72, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1200949411
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422584, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a3a7e4f1885d4d642aaf6fa7bb062130, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1247617879 stripped
 GameObject:
@@ -2498,6 +2576,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11443502, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7adcadb268f64ba4d80e4bc42668a41a, type: 2}
   m_IsPrefabParent: 0
@@ -2819,6 +2901,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11487054, guid: ff4e5e562822d4549a53daeda46a12e1, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff4e5e562822d4549a53daeda46a12e1, type: 2}
   m_IsPrefabParent: 0
@@ -2901,6 +2987,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11470678, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e1f708189efacb428ed9b75a8747ced, type: 2}
   m_IsPrefabParent: 0
@@ -3226,6 +3316,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11471620, guid: d862be266d771fc43a893e54e6c336e0, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d862be266d771fc43a893e54e6c336e0, type: 2}
   m_IsPrefabParent: 0
@@ -3510,6 +3604,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11477418, guid: 7698b3191b5f27e49adeec11892dda98, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7698b3191b5f27e49adeec11892dda98, type: 2}
   m_IsPrefabParent: 0
@@ -3635,6 +3733,10 @@ Prefab:
       propertyPath: LeftThreshold
       value: 
       objectReference: {fileID: 981899826}
+    - target: {fileID: 11437236, guid: 20ef29f467984344d8e95ed64755d130, type: 2}
+      propertyPath: ExplosionHandler
+      value: 
+      objectReference: {fileID: 69210960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ef29f467984344d8e95ed64755d130, type: 2}
   m_IsPrefabParent: 0
