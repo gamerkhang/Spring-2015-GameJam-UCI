@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour {
 	public void LoseLife () {
 		lives--;
 		ScreenShake.shake = 1f;
+		streakAmount = 0;
 	}
 	
 	public void GameOver () {
