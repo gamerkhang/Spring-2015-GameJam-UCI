@@ -204,6 +204,6 @@ public class GameManager : MonoBehaviour {
 	
 	public void Quit () {
 		Time.timeScale = 1;
-		Application.LoadLevel ("MainMenu");
+		Application.LoadLevel ("Credits");
 	}
 }
