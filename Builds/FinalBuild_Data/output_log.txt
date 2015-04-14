@@ -1,0 +1,72 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: Intel(R) HD Graphics 3000 (ID=0x116)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.103 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Khang Tran\Desktop\UCI Stuff\2015 3Spring\Game Jam Spring 2015\Spring-2015-GameJam-UCI\Builds\FinalBuild_Data\Managed\System.dll (this message is harmless)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.016878 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 524.
+Total: 0.375719 ms (FindLiveObjects: 0.061578 ms CreateObjectMapping: 0.020080 ms MarkObjects: 0.280673 ms  DeleteObjects: 0.012048 ms)
+
+9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.672457 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Clock.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 379.
+Total: 0.352069 ms (FindLiveObjects: 0.055777 ms CreateObjectMapping: 0.040160 ms MarkObjects: 0.175811 ms  DeleteObjects: 0.078535 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.066025 ms
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 226.
+Total: 0.400261 ms (FindLiveObjects: 0.071841 ms CreateObjectMapping: 0.014279 ms MarkObjects: 0.269964 ms  DeleteObjects: 0.041944 ms)
+

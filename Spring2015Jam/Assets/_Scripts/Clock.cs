@@ -150,7 +150,7 @@ public class Clock : MonoBehaviour
         HealthBar.fillAmount = HealthAmount;
         //allow use of scrollwheel
         currentTime += (int)(20 * Input.GetAxis("Mouse ScrollWheel"));
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         { //left button, speedup
             timeChanger += clickChangeRate;
             CursorChange.LeftClick();
@@ -160,7 +160,7 @@ public class Clock : MonoBehaviour
                 timeChanger = 0f;
             }
         }
-        else if (Input.GetMouseButton(1))
+        else if (Input.GetMouseButton(0))
         { //right button, slowdown
             timeChanger += clickChangeRate;
             CursorChange.RightClick();
